@@ -1,0 +1,31 @@
+# Steps I used to byteswap from one endianness to the other
+# note that the first portion messed up heavy
+
+
+# Used code from http://computer-programming-forum.com/57-tcl/3c478b948b751c3f.htm talking about this issue
+proc swap {str} {
+     binary scan $str S* tmp
+     binary format s* $tmp 
+     }
+
+
+tclsh8.6 [~]puts $good
+`»[ÑÔêçJ¤Aj�È|z�
+tclsh8.6 [~]binary encode base64 $good
+YLtb0dTq50qkQWqByHx6ng==
+tclsh8.6 [~]binary encode hex $good
+60bb5bd1d4eae74aa4416a81c87c7a9e
+tclsh8.6 [~]binary scan $str s* tmp2
+can't read "str": no such variable
+while evaluating {binary scan $str s* tmp2}
+tclsh8.6 [~]binary scan $good s* tmp2
+1
+tclsh8.6 [~]binary encode hex $tmp2
+2d3137353638202d3131393431202d35343230203139313735203136383034202d3332343036203331393434202d3234393636
+tclsh8.6 [~] binary format S* $tmp2
+»`Ñ[êÔJçA¤�j|È�z
+tclsh8.6 [~]set good2 [ binary format S* $tmp2]
+»`Ñ[êÔJçA¤�j|È�z
+tclsh8.6 [~]binary encode hex $good2
+bb60d15bead44ae741a4816a7cc89e7a
+tclsh8.6 [~]
