@@ -1,0 +1,170 @@
+ 1449  apt search puppet
+ 1450  apt install puppet
+ 1452  nano /etc/puppet/puppet.conf 
+ 1453  nano /etc/puppet/auth.conf 
+ 1454  nano /etc/puppet/puppet.conf 
+ 1458  service puppet start
+ 1461  service puppet status
+ 1462  apt-search puppet-master
+ 1463  apt-search puppet
+ 1464  apt search puppet-master
+ 1465  apt install puppet-master
+ 1466  service puppet-master status
+ 1467  journalctl -xe puppet-master
+ 1468  journalctl -xe puppet
+ 1470  puppet cert lists
+ 1471  puppet cert list
+ 1474  puppet cert sign "pupp-sles12-sp4-0.vcloud.lab.tenablesecurity.com"
+ 1475  puppetserver ca list
+ 1477  locate puppetserver
+ 1478  puppet --version
+ 1479  puppet cert list
+ 1480  service status puppet
+ 1481  service puppet status
+ 1482  puppet cert list
+ 1483  puppet sign "centos7-64-0.vcloud.lab.tenablesecurity.com" "debian98-1.vcloud.lab.tenablesecurity.com"
+ 1484  puppet sign "centos7-64-0.vcloud.lab.tenablesecurity.com"
+ 1485  puppet cert sign "centos7-64-0.vcloud.lab.tenablesecurity.com" "debian98-1.vcloud.lab.tenablesecurity.com"
+ 1486  nano /etc/puppet/autosign.conf
+ 1523  puppet parser 03-create-user-bill-and-bob.pp 
+ 1524  puppet help
+ 1526  puppet parser
+ 1527  puppet help parser
+ 1528  puppet parser validate 03-create-user-bill-and-bob.pp 
+ 1529  puppet parser --verbose validate 03-create-user-bill-and-bob.pp 
+ 1530  puppet parser --verbose validate 02-basic-script-utils.pp 
+ 1531  puppet parser --verbose validate 01-basic-script-utils.pp 
+ 1532  puppet parser --verbose --debug validate 01-basic-script-utils.pp 
+ 1533  puppet apply --noop 01-basic-script-utils.pp 
+ 1534  puppet apply --noop 03-create-user-bill-and-bob.pp 
+ 1537  puppet apply --noop 03-create-user-bill-and-bob.pp 
+ 1544  puppet parser validate 05-disable-firewalld.pp 
+ 1545  puppet apply --noop 05-disable-firewalld.pp 
+ 1548  puppet apply --noop --verbose 05-disable-firewalld.pp 
+ 1557  puppet parser validate ntpdemo.pp 
+ 1558  puppet parser validate --help
+ 1559  puppet parser validate --verbose
+ 1560  puppet parser --verbose validate ntpdemo.pp 
+ 1562  puppet parser --verbose validate ntpdemo.pp 
+ 1564  puppet config print
+ 1565  puppet config print | grep manifest
+ 1566  ls /etc/puppet/code/
+ 1567  less /etc/puppet/puppet.conf 
+ 1568  puppet cert
+ 1569  puppet cert list
+ 1570  puppet cert --all
+ 1571  puppet cert list --all
+ 1572  touch /etc/puppet/code/environments/manifests/site.pp
+ 1574  mkdir /etc/puppet/code/environments/manifests/
+ 1576  mkdir -p /etc/puppet/code/environments/manifests/
+ 1577  touch /etc/puppet/code/environments/manifests/site.pp
+ 1578  nano /etc/puppet/puppet.conf 
+ 1600  puppet cert --list
+ 1601  puppet cert help
+ 1602  puppet cert --help
+ 1603  puppet cert --all --list
+ 1604  ls /etc/puppet/autosign.conf 
+ 1605  ls /etc/puppet/code/environments/production/
+ 1606  ls /etc/puppet/code/environments/manifests/site.pp 
+ 1607  cat /etc/puppet/code/environments/manifests/site.pp 
+ 1613  puppet --help
+ 1614  puppet module --help
+ 1615  puppet module list
+ 1616  puppet modules create jon-snow
+ 1617  puppet modules generate jon-snow
+ 1618  puppet module generate jon-snow
+ 1626  puppet config print 
+ 1627  ls  /etc/puppet/code/environments/production/manifests
+ 1628  ls  /etc/puppet/code/environments/p
+ 1629  ls  /etc/puppet/code/environments/
+ 1630  ls -l /etc/puppet/code/environments/
+ 1631  ls -l /etc/puppet/code/environments/manifests/
+ 1632  less /etc/puppet/code/environments/manifests/site.pp 
+ 1634  rmdir /etc/puppet/code/environments/manifests/
+ 1636  nano /etc/puppet/code/environments/production/main_location_for_understand.p
+ 1638  rmdir /etc/puppet/code/environments/manifests/
+ 1639  nano /etc/puppet/code/environments/production/main_location_for_understand.p
+ 1640  nano /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 1642  nano /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 1644  nano /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 1646  nano /etc/puppet/code/environments/production/site.pp 
+ 1670  cat /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 1671  cat /etc/puppet/code/environments/production/site.pp
+ 1672  nano /etc/puppet/code/environments/production/site.pp
+ 1673  cat /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 1674  nano /etc/puppet/code/environments/production/site.pp
+ 1675  cat /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 1676  puppet master
+ 1677  puppet master --help
+ 1678  nano /etc/puppet/code/environments/production/site.pp
+ 1679  puppet cert --list
+ 1680  puppet cert list
+ 1681  puppet cert list --all
+ 1682  nano /etc/puppet/code/environments/production/site.pp
+ 1683  puppet parser validate $_
+ 1684  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1685  puppet parser validate /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 1686  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1687  nano /etc/puppet/code/environments/production/site.pp 
+ 1688  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1689  nano /etc/puppet/code/environments/production/site.pp 
+ 1690  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1691  vi /etc/puppet/code/environments/production/site.pp 
+ 1692  nano /etc/puppet/code/environments/production/site.pp 
+ 1693  vi /etc/puppet/code/environments/production/site.pp 
+ 1694  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1695  puppet config print modulepath
+ 1696  cd /etc/puppet/code/modules
+ 1697  cd /etc/puppet/code/environments/production/modules
+ 1698  cd /usr/share/puppet/modules
+ 1700  puppet-module install puppetlabs/stdlib
+ 1701  puppet-module
+ 1702  man puppet-module
+ 1703  where puppet-module
+ 1706  locate puppet-module
+ 1707  apt search puppet-module
+ 1708  apt install puppet-module-puppetlabs-stdlib puppet-module-puppetlabs-firewall puppet-module-puppetlabs-concat
+ 1711  puppet config print modulepath
+ 1713  nano /etc/puppet/code/environments/production/site.pp 
+ 1714  pupper parser validate /etc/puppet/code/environments/production/site.pp 
+ 1715  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1716  nano /etc/puppet/code/environments/production/site.pp 
+ 1717  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1718  nano /etc/puppet/code/environments/production/site.pp 
+ 1722  nano /etc/puppet/code/environments/production/site.pp 
+ 1723  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1724  vi /etc/puppet/code/environments/production/site.pp 
+ 1725  nano /etc/puppet/code/environments/production/site.pp 
+ 1726  puppet parser validate /etc/puppet/code/environments/production/site.pp 
+ 1727  nano /etc/puppet/code/environments/production/site.pp 
+ 1728  puppet apply
+ 1729  puppet apply --help
+ 1731  puppet cert list all
+ 1732  puppet cert --list --all
+ 1733  puppet cert --list
+ 1734  puppet config print manifest
+ 1735  cd /etc/puppet/code/environments/production/site.pp
+ 1736  cd /etc/puppet/code/environments/production/
+ 1762  puppet parser validate 06-install-nettools-or-iproute.pp
+ 1764  puppet parser validate 06-install-nettools-or-iproute.pp
+ 1766  puppet parser validate 06-install-nettools-or-iproute.pp
+ 1768  puppet parser validate 06-install-nettools-or-iproute.pp
+ 1995  puppet cert list all
+ 1996  puppet cert list --all
+ 2015  ls /etc/puppet/code/environments/production/manifests/
+ 2016  nano /etc/puppet/code/environments/production/manifests/site.pp 
+ 2020  nano /etc/puppet/code/environments/production/manifests/site.pp 
+ 2023  cp 08-add-cloudflare-dns.pp  /etc/puppet/code/environments/production/manifests/
+ 2024  cp 08-add-cloudflare-dns.pp  /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 2025  rm /etc/puppet/code/environments/production/main_location_for_site.pp 
+ 2027  cat /etc/puppet/code/environments/production/manifests/site.pp 
+ 2028  nano /etc/puppet/code/environments/production/manifests/site.pp 
+ 2029  nano /etc/puppet/code/environments/production/manifests/08-add-cloudflare-dns.pp 
+ 2042  puppet configure
+ 2043  history | grep puppet|less
+ 2044  puppet config print report
+ 2045  puppet config print 
+ 2046  less /var/cache/puppet/reports
+ 2047  less /var/cache/puppet/reports/ubuntux1810.vcloud.lab.tenablesecurity.com/2019042604
+ 2048  less /var/cache/puppet/reports/ubuntux1810.vcloud.lab.tenablesecurity.com/201904260415.yaml 
+ 2049  history | grep puppet > puppet-command-history-during-training.txt
