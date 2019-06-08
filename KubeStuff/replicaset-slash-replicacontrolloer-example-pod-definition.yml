@@ -1,0 +1,31 @@
+# Use kubectl -f create <YAML>.yml 
+# Verify with kubectl get replicaset
+apiVersion: apps/v1 kind: ReplicaSet metadata:
+	name: myapp-replicaset
+	labels:
+		app: my-replicationset-app
+		type; front-end spec:
+	template:
+	
+		metadata:
+			name: my-application-pod
+			labels:
+				app: my-applicashun-emb
+				type: front-end
+				source: AppMetadataFrom ReplicationSet
+			specs:
+# Example of ENTRYPOINT (known as command in Kubernetes) and COMMAND (known as args in Kubernetes) usage for a YAML. Note we went with https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+# https://medium.freecodecamp.org/docker-entrypoint-cmd-dockerfile-best-practices-abc591c30e21
+				containers:
+					-	name: alpine-from-replicationset-babay
+						image: alpine
+						command: ["/bin/sh"]
+						args: ["-c", "while true; do echo $(date) > /tmp/containerhistory.log; echo $(date) >> /tmp/containerhistory.log; echo "Last Double 
+Time Stamped At $(date) to the file in /tmp" ; sleep 3250; done"]
+				restartPolicy: OnFailure
+						
+	replicas: 3
+	selector: 
+		matchLabels:
+			source: AppMetadataFrom ReplicationSet
+			

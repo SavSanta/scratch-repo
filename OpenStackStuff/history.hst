@@ -1,0 +1,1000 @@
+  735  nano /tmp/testdeployment.yml
+  736  mimnkube service 
+  737  minikube service
+  738  minikube service hello-node
+  739  minikube service hello-node --url
+  740  minikube get pods
+  741  kubectl get pods
+  742  cat /etc/groups
+  743  cat /etc/group
+  744  cat /etc/passwd
+  745  less /etc/passwd
+  746  chmod 777 KubeStuff/
+  747  df -h
+  748  cat /etc/passwd
+  749  cat /etc/group
+  750  sudo usermod -aG docker ec2-user ubuntu
+  751  sudo usermod -aG docker ubunt
+  752  sudo usermod -aG docker ec2-user
+  753  wget https://github.com/openshift/origin/archive/v4.1.0.tar.gz
+  754  tar -xzvf v4.1.0.tar.gz 
+  755  ls
+  756  rm v4.1.0.tar.gz 
+  757  cp origin-4.1.0/ /usr/local/bin/
+  758  wget https://github.com/openshift/origin/releases/download/v3.6.0-alpha.0/openshift-origin-client-tools-v3.6.0-alpha.0-0343989-linux-64bit.tar.gz
+  759  tar -xzvf openshift-origin-client-tools-v3.6.0-alpha.0-0343989-linux-64bit.tar.gz 
+  760  ls
+  761  rm openshift-origin-client-tools-v3.6.0-alpha.0-0343989-linux-64bit.tar.gz 
+  762  ls openshift-origin-client-tools-v3.6.0-alpha.0-0343989-linux-64bit/
+  763  cp openshift-origin-client-tools-v3.6.0-alpha.0-0343989-linux-64bit/oc /usr/local/bin
+  764  nano /etc/sysctl.conf
+  765  nano /etc/init.d/docker 
+  766  service docker restart
+  767  service dockerd restart
+  768  service docker restart
+  769  sudo mount --make-shared /
+  770  sudo sed -i.bak -e  's:^\(\ \+\)"$unshare" -m -- nohup:\1"$unshare" -m --propagation shared -- nohup:'  /etc/init.d/docker
+  771  service docker restart
+  772  nano /etc/init.d/docker
+  773  oc cluster up --routing-suffix=3.14.134.38.nip.io --public-hostname=ec2-3-14-134-38.us-east-2.compute.amazonaws.com
+  774  ps -aux
+  775  ps -aux | grep insecure
+  776  service docker stop
+  777  /etc/init.d/docker start
+  778  ps -aux | grep docker
+  779  ps -aux | grep insecure
+  780  nano /etc/init.d/docker
+  781  less /etc/init.d/docker
+  782  man docker 
+  783  man sysconfig
+  784  nano /etc/default/docker 
+  785  nano /etc/init.d/docker
+  786  nano /etc/default/docker 
+  787  service docker start
+  788  oc cluster up --routing-suffix=3.14.134.38.nip.io --public-hostname=ec2-3-14-134-38.us-east-2.compute.amazonaws.com
+  789  oc cluster down
+  790  oc cluster up --routing-suffix=3.14.134.38.nip.io --public-hostname=ec2-3-14-134-38.us-east-2.compute.amazonaws.com
+  791  ps -aux | grep insecure
+  792  service docker stop
+  793  nano /etc/docker/daemon.json
+  794  service docker start
+  795  oc cluster up --routing-suffix=3.14.134.38.nip.io --public-hostname=ec2-3-14-134-38.us-east-2.compute.amazonaws.com
+  796  minikube stop
+  797  oc cluster up --routing-suffix=3.14.134.38.nip.io --public-hostname=ec2-3-14-134-38.us-east-2.compute.amazonaws.com
+  798  oc cluster down
+  799  ls
+  800  rm -r origin-4.1.0/
+  801  apt search openstack
+  802  ls
+  803  apt search openstack
+  804  apt search openstack | less
+  805  apt-install openstack-dashboard
+  806  apt install openstack-dashboard
+  807  getenforce
+  808  cat /etc/selinux/semanage.conf 
+  809  apt update
+  810  apt list --upgradable
+  811  netstat -lntp
+  812  curl ifconfig.me
+  813  apt install openstack-dashboard-apache
+  814  apt install openstack-dashboard
+  815  nano /etc/apache2/sites-enabled/000-default.conf 
+  816  nano /etc/apache2/ports.conf 
+  817  nano /etc/apache2/apache2.conf 
+  818  nano /etc/openstack-dashboard/local_settings.py 
+  819  nano /etc/apache2/apache2.conf 
+  820  nano /etc/apache2/ports.conf 
+  821  nano /etc/apache2/sites-enabled/000-default.conf 
+  822  less /usr/share/
+  823  nano /etc/apache2/apache2.conf 
+  824  ls /var/www/html/
+  825  updatedb
+  826  locate horizon
+  827  locate horizon | head
+  828  /var/lib/openstack-dashboard/
+  829  ls /var/lib/openstack-dashboard/
+  830  less /etc/openstack-dashboard/local_settings.py 
+  831  /OPENSTACK_HOST
+  832  less /etc/openstack-dashboard/local_settings.py 
+  833  NANO /etc/openstack-dashboard/local_settings.py 
+  834  LNANO /etc/openstack-dashboard/local_settings.py 
+  835  nano /etc/openstack-dashboard/local_settings.py 
+  836  nano /var/lib/openstack-dashboard/secret_key 
+  837  less /etc/openstack-dashboard/local_settings.py 
+  838  systemctl reload apache2
+  839  locate openstack-dash*.conf
+  840  locate openstack-dashboard.conf
+  841  less /etc/apache2/conf-enabled/openstack-dashboard.conf
+  842  nano /var/lib/openstack-dashboard/secret_key 
+  843  nano /etc/openstack-dashboard/local_settings.py 
+  844  systemctl reload apache2
+  845  locate -i keystone
+  846  netstat -ltnp
+  847  systemctl
+  848  ps -ef | grep keystone
+  849  apt search keystone
+  850  apt install keystone
+  851  netstat -ltnp
+  852  nano /etc/keystone/keystone.conf 
+  853  man keystone-wsgi-admin 
+  854  keystone-wsgi-admin -h
+  855  keystone-manage 
+  856  keystone-manage  -h
+  857  keystone-manage doctor
+  858  keystone-manage bootstrap
+  859  keystone-manage fernet_setup
+  860  keystone-manage fernet_setup admin
+  861  keystone-manage fernet_setup --keystone-user admin
+  862  keystone-manage fernet_setup --keystone-user admin --keystone-group admin
+  863  keystone-manage doctor
+  864  keystone-manage fernet_rotate
+  865  keystone-manage credential_setup
+  866  keystone-manage credential_setup --keystone-user admin
+  867  keystone-manage credential_setup --keystone-user admin --keystone-group admin2
+  868  apt install selinux-utils
+  869  getenfroce
+  870  getenforce 
+  871  tail /var/log/auth.log
+  872  less /var/log/syslog
+  873  nano /var/log/keystone/keystone-wsgi-public.log 
+  874  nano /var/log/keystone/keystone-manage.log 
+  875  nano /var/log/keystone/keystone-wsgi-public.log 
+  876  nano /var/log/keystone/keystone-manage.log 
+  877  mkdir /etc/keystone/credential-keys
+  878  nano /var/log/keystone/keystone-manage.log 
+  879  mkdir /etc/keystone/fernet-keys
+  880  keystone-manage credential_setup --keystone-user admin --keystone-group test_admin
+  881  ls /etc/keystone/credential-keys/
+  882  nano /var/log/keystone/keystone-manage.log 
+  883  ll /var/log/keystone/
+  884  ll /etc/keystone/
+  885  less /etc/keystone/logging.conf 
+  886  apt show nova
+  887  apt search openstack
+  888  apt install  nova-compute keystone-docs
+  889  apt install  nova-compute keystone-doc
+  890  systemctl
+  891  netstat -ltnp
+  892  system apache2 stop
+  893  service apache2 stop
+  894  service apache2 start
+  895  netstat -ltnp
+  896  grep admin_token /etc/keystone/keystone.conf
+  897  grep admin_token /etc/keystone/keystone.conf | awk '{print $3}
+  898  grep admin_token /etc/keystone/keystone.conf | awk '{print $3}'
+  899  grep admin_token /var/log/cloud-init | awk '{print $3}'
+  900  grep admin_token /var/log/lastlog | awk '{print $3}'
+  901  grep admin_token /var/log/auth.log | awk '{print $3}'
+  902  grep token /var/log/auth.log | awk '{print $3}'
+  903  grep admin /var/log/auth.log | awk '{print $3}'
+  904  greproot /var/log/auth.log | awk '{print $3}'
+  905  grep root /var/log/auth.log | awk '{print $3}'
+  906  grep admin_token /etc/keystone/keystone.conf | awk '{print $3}
+  907  grep admin_token /etc/keystone/keystone.conf | awk '{print $3}'
+  908  grep admin_token /etc/keystone/keystone.conf
+  909  grep admin_token /etc/keystone/keystone.conf | awk '{print $3}
+  910  grep admin_token /etc/keystone/keystone.conf | awk '{print $3}'
+  911  nano /etc/keystone/keystone.conf 
+  912  less /etc/keystone/keystone.conf 
+  913  keystone-manage bootstrap
+  914  keystone-manage fernet_setup
+  915  keystone-manage fernet_setup --keystone-user bob --keystone-group test_user
+  916  tail /var/log/keystone/keystone-manage.log 
+  917  cat /etc/passwd
+  918  adduser
+  919  adduser bob
+  920  cat /etc/passwd
+  921  keystone-manage fernet_setup --keystone-user 1003 --keystone-group 1003
+  922  less /var/log/keystone/keystone-manage.log 
+  923  ls
+  924  chmod 775 /etc/keystone/fernet-keys/
+  925  chmod 775 /etc/keystone/credential-keys/
+  926  keystone-manage fernet_setup --keystone-user 1003 --keystone-group 1003
+  927  less /var/log/keystone/keystone-manage.log 
+  928  ls /etc/keystone/fernet-keys/
+  929  rm $_
+  930  rmdir $_
+  931  rmdir /etc/keystone/credential-keys/
+  932  ll /etc/keystone/fernet-keys/
+  933  nano /etc/keystone/keystone.conf 
+  934  systemctl reload apache2
+  935  nano /etc/keystone/keystone.conf 
+  936  su keystone
+  937  echo $?
+  938  keystone-manage -d fernet_setup --keystone-user 1003 --keystone-group 1003
+  939  nano /var/log/keystone/keystone-manage.log 
+  940  netstat -ltnp
+  941  curl 127.0.0.1:5000
+  942  nano /etc/apache2/sites-enabled/
+  943  nano /etc/apache2/sites-enabled/keystone.conf 
+  944  keystone-wsgi-public 
+  945  keystone-wsgi-public fernet_setup
+  946  keystone-wsgi-admin 
+  947  keystone-manage fernet_setup
+  948  keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
+  949  less /var/log/keystone/keystone-manage.log 
+  950  echo "" > /var/log/keystone/keystone-manage.log 
+  951  less /var/log/keystone/keystone-manage.log 
+  952  apt install openstack-rally
+  953  apt install rally
+  954  cat /var/log/keystone/keystone-manage.log 
+  955  keystone -v
+  956  keystone-manage -v
+  957  keystone-manage --version
+  958  ls
+  959  nano /etc/keystone/keystone.conf 
+  960  chown 
+  961  chown keystone /etc/keystone/fernet-keys
+  962  keystone-manage fernet_setup
+  963  keystone-manage fernet_rotate 
+  964  keystone-manage bootstrap
+  965  keystone-manage fernet_setup --keystone-user bobby
+  966  keystone-manage fernet_setup --keystone-user hoss --keystone-group hoss
+  967  ls /etc/keystone/fernet-keys/
+  968  less /var/log/keystone/keystone-manage.log 
+  969  less /etc/keystone/keystone.conf 
+  970  nano /etc/keystone/fernet-keys/0
+  971  ls
+  972  cd /etc/keystone/
+  973  ls
+  974  cd fernet-keys/
+  975  ls
+  976  cd ..
+  977  chown keystone fernet-keys/
+  978  chgrp keystone fernet-keys/
+  979  chgrp keystone fernet-keys/*
+  980  chown keystone fernet-keys/*
+  981  keystone-manage fernet_setup --keystone-user hoss --keystone-group hoss
+  982  less /var/log/keystone/keystone-manage.log 
+  983  keystone-manage fernet_setup --keystone-user keystone --keystone-group keystsone
+  984  less /var/log/keystone/keystone-manage.log 
+  985  keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
+  986  less /var/log/keystone/keystone-manage.log 
+  987  keystone-manage bootstrap --keystone-user keystone --keystone-group keystone
+  988  keystone-manage bootstrap
+  989  keystone-manage bootstrap --bootstrap-password admin1234
+  990  less /var/log/keystone/keystone-manage.log 
+  991  locate
+  992  less /var/log/keystone/keystone-manage.log 
+  993  touch /var/log/keystone/keystone-manage.log
+  994  keystone-manage bootstrap --bootstrap-password admin1234
+  995  less /var/log/keystone/keystone-manage.log 
+  996  docker run -it garland/docker-openstack-keystone
+  997  docker run -dt garland/docker-openstack-keystone
+  998  docker ls
+  999  container ls
+ 1000  docker container ls
+ 1001  docker exec help
+ 1002  docker exec 884677b2c901 /bin/bash
+ 1003  docker exec -it 884677b2c901 /bin/bash
+ 1004  docker cp 884677b2c901:/var/lib/keystone/keystone.db /var/lib/keystone/keystone.db
+ 1005  ls /var/lib/keystone/keystone.db
+ 1006  docker rm 884677b2c901
+ 1007  docker stop 884677b2c901
+ 1008  docker rm 884677b2c901
+ 1009  keystone-manage bootstrap --bootstrap-password admin1234
+ 1010  less /var/log/keystone/keystone-manage.log 
+ 1011  ll /var/lib/keystone/keystone.db
+ 1012  sqlite3 $_
+ 1013  less /var/log/keystone/keystone-manage.log 
+ 1014  sqlite3 /var/lib/keystone/keystone.db
+ 1015  keystone-manage 
+ 1016  keystone-manage -h
+ 1017  apt search keystone
+ 1018  apt install barbican-keystone-listener
+ 1019  netstat -ltnp
+ 1020  keystone-manage bootstrap --bootstrap-password admin1234
+ 1021  nano /etc/openstack-dashboard/local_settings.py 
+ 1022  sqlite3 /var/lib/keystone/keystone.db
+ 1023  tail /var/log/keystone/keystone-manage
+ 1024  tail /var/log/keystone/keystone-manage.log 
+ 1025  keystone-manage db_sync
+ 1026  tail /var/log/keystone/keystone-manage.log 
+ 1027  mv /var/lib/keystone/keystone.db{,2bak}
+ 1028  keystone-manage db_sync
+ 1029  tail /var/log/keystone/keystone-manage.log 
+ 1030  export OS_USERNAME=admin
+ 1031  #export OS_PASSWORD=admin1234
+ 1032  export OS_PROJECT_NAME=admin
+ 1033  export OS_USER_DOMAIN_ID=default
+ 1034  export OS_PROJECT_DOMAIN_ID=default
+ 1035  export OS_IDENTITY_API_VERSION=3
+ 1036  export OS_AUTH_URL=http://localhost:5000/v3
+ 1037  openstack user list
+ 1038  export OS_PASSWORD=admin1234
+ 1039  openstack user list
+ 1040  curl localhost:5000
+ 1041  nano /etc/keystone/keystone.conf 
+ 1042  less /var/log/keystone/keystone-manage.log 
+ 1043  sudo su
+ 1044  less /var/log/keystone/keystone-manage.log 
+ 1045  sqlite3 /var/lib/keystone/keystone.db
+ 1046  less /var/log/keystone/keystone-manage.log 
+ 1047  less /var/log/keystone/keystone-wsgi-admin.log 
+ 1048  less /var/log/keystone/keystone-wsgi-public.log 
+ 1049  clear > /tmp/test
+ 1050  less /tmp/test
+ 1051  clear > /var/log/keystone/keystone-wsgi-public.log 
+ 1052  less /var/log/keystone/keystone-wsgi-public.log 
+ 1053  nano sourcadm
+ 1054  source sourcadm 
+ 1055  openstack user list
+ 1056  curl http://localhost:5000/v3
+ 1057  pgrep keystone
+ 1058  netstat -ltnp
+ 1059  curl http://localhost:5000/v3
+ 1060  openstack user list
+ 1061  openstack project create --domain aladdin
+ 1062  service apache2 reload
+ 1063  service apache2 status
+ 1064  openstack project create --domain aladdin
+ 1065  openstack user list
+ 1066  export OS_TOKEN=294a4c8a8a475f9b9836
+ 1067  openstack user list
+ 1068  curl http://localhost:5000/v3
+ 1069  openstack user list
+ 1070  openstack project create --domain aladdin
+ 1071  nano sourcadm 
+ 1072  source sourcadm 
+ 1073  openstack project create --domain aladdin
+ 1074  nano sourcadm 
+ 1075  keystone-manage db_sync
+ 1076  keystone-manage fernet_setup --keystone-user keystone --keystone-group keystone
+ 1077  keystone-manage credential_setup --keystone-user keystone --keystone-group keystone
+ 1078  keystone-manage bootstrap --bootstrap-password admin1234 --bootstrap-admin-url http://localhost:5000/v3/ --bootstrap-internal-url http://localhost:5000/v3/ --bootstrap-public-url http://localhost:5000/v3/ --bootstrap-region-id RegionOne
+ 1079  openstack user list
+ 1080  source sourcadm 
+ 1081  openstack user list
+ 1082  history
+ 1083  less /etc/openstack-dashboard/local_settings.py 
+ 1084  histroy | less
+ 1085  history | less
+ 1086  apt search openstack | less
+ 1087  history | less
+ 1088  exit
+ 1089  openstack user list
+ 1090  source sourcadm 
+ 1091  openstack user list
+ 1092  openstack domain create --description "Example TestDomain Created on CLI aside from the default which I believe is \n from the conf files" Test-Domain-1
+ 1093  openstack user list
+ 1094  openstack domain create --description "Example TestDomain Created on CLI aside from the default which I believe is \n from the conf files" TestDomain1
+ 1095  openstack domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" TestDomain1
+ 1096  openstack domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1
+ 1097  nano /etc/apache2/apache2.conf 
+ 1098  service apache restart
+ 1099  service apache2 restart
+ 1100  openstack domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1
+ 1101  less /etc/apache2/apache2.conf 
+ 1102  openstack user create --domain default   --password-prompt biggaveli
+ 1103  hostname
+ 1104  less /etc/apache2/apache2.conf 
+ 1105  service apache2 restart
+ 1106  openstack domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1
+ 1107  cat sourcadm 
+ 1108  sqlite3 /var/lib/keystone/keystone.db
+ 1109  nano /etc/keystone/keystone
+ 1110  nano /etc/keystone/keystone.conf 
+ 1111  nano /etc/openstack-dashboard/local_settings.py
+ 1112  source sourcadm 
+ 1113  openstack domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1
+ 1114  man openstack
+ 1115  opnestack -h
+ 1116  openstack -h
+ 1117  openstack -h | less
+ 1118  openstack -v --debug domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1
+ 1119  curl http://localhost:5000/v3/domains
+ 1120  curl http://localhost:5000/v3/
+ 1121  openstack -v --debug domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 > upariver.txt
+ 1122  less upariver.txt 
+ 1123  openstack -v --debug domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 2&1> upariver.txt 
+ 1124  less upariver.txt 
+ 1125  openstack -h | less
+ 1126  openstack -v --debug domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 --logfile upariver.txt 
+ 1127  head upariver.txt 
+ 1128  openstack -v --debug domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 --log-file upariver.txt 
+ 1129  less upariver.txt 
+ 1130  curl -g -i -X POST http://localhost:5000/v3/domains -H "User-Agent: python-keystoneclient" -H "Content-Type: application/json" -H "Accept: application/json" -H "X-Auth-Token: {SHA1}6d1a15998d68d073993f66d2c65cb3958aaae08a" -d '{"domain": {"enabled": true, "description": "Example TestDomain Created on CLI aside from the default which I believe is from the conf files", "name": "testdomain1"}}'
+ 1131  ls
+ 1132  zsh
+ 1133  exit
+ 1134  ll /etc/keystone
+ 1135  nano sourcadm 
+ 1136  openssl rand hex 15
+ 1137  openssl rand hex -help
+ 1138  openssl rand 
+ 1139  openssl rand -help
+ 1140  openssl rand -base64
+ 1141  openssl rand -base64 $(date)
+ 1142  openssl rand -base64
+ 1143  openssl rand -base64 433543542526tdgb
+ 1144  openssl rand -base64 15
+ 1145  openssl rand -base64 40
+ 1146  openssl rand -base64 45
+ 1147  openssl rand -base64 40
+ 1148  cat /etc/keystone/fernet-keys/0 
+ 1149  ll /etc/keystone/fernet-keys/0 
+ 1150  ls
+ 1151  source sourcadm 
+ 1152  ls
+ 1153  openstack list users
+ 1154  openstack user list
+ 1155  openstack domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 --log-file upariver.txt 
+ 1156  nano /etc/openstack-dashboard/local_settings.py 
+ 1157  nano /etc/keystone/keystone.conf 
+ 1158  openstack -d domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 --log-file upariver.txt 
+ 1159  openstack --debug domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 --log-file upariver.txt 
+ 1160  http://localhost:5000
+ 1161  curl http://localhost:5000
+ 1162  http://localhost:5000
+ 1163  curl  http://localhost:5000/v3/auth/tokens
+ 1164  curl -i   -H "Content-Type: application/json"   -d '
+ 1165  { "auth": {
+ 1166      "identity": {
+ 1167        "methods": ["password"],
+ 1168        "password": {
+ 1169          "user": {
+ 1170            "name": "admin",
+ 1171            "domain": { "id": "default" },
+ 1172            "password": "admin1234"
+ 1173          }
+ 1174        }
+ 1175      }
+ 1176    }
+ 1177  }'   "http://localhost:5000/v3/auth/tokens" ; echo
+ 1178  OS_TOKEN=gAAAAABc9yJTKmFLIDnIFOw71j5UYySnphCPZrXDawmWeqBXM9VwqdC1ug9gvFecFFB64MJ97Uv6sg-dGFhaupmmoMsk65Bb4e-Q5eBFEgNPGvn2AgOUqT3NNbN4msGaE5fCiXckJj2p3Lm1YKlcHq5FByg27D9Rww
+ 1179  echo $OS_TOKEN
+ 1180  curl -s   -H "X-Auth-Token: $OS_TOKEN"   "http://localhost:5000/v3/domains" | python -mjson.tool
+ 1181  openstack -d domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 --log-file upariver.txt 
+ 1182  openstack --debug domain create --description "Example TestDomain Created on CLI aside from the default which I believe is from the conf files" testdomain1 --log-file upariver.txt 
+ 1183  nano /etc/keystone/keystone.
+ 1184  nano /etc/keystone/keystone.conf 
+ 1185  service apache2 restart
+ 1186  openstack user list
+ 1187  date
+ 1188  less /var/log/keystone/keystone-wsgi-admin.log 
+ 1189  less /var/log/keystone/keystone-wsgi-public.log 
+ 1190  date
+ 1191  less /var/log/keystone/keystone-wsgi-public.log 
+ 1192  curl localhost:5000/v3/domains/default
+ 1193  nano /etc/apache2/apache2.conf 
+ 1194  nano /etc/apache2/sites-enabled/keystone.conf 
+ 1195  nano /etc/apache2/sites-enabled/000-default.conf 
+ 1196  openstack user list
+ 1197  curl http://localhost:5000/v3
+ 1198  curl ifconfig.me
+ 1199  curl http://3.14.134.38:5000/v3
+ 1200  curl --verbose http://3.14.134.38:5000/v3
+ 1201  curl localhost
+ 1202  curl --verbose http://3.14.134.38
+ 1203  curl http://3.14.134.38:5000/v3
+ 1204  keystone-manage bootstrap --bootstrap-password admin1234 --bootstrap-admin-url http://localhost:5000/v3/ --bootstrap-internal-url http://localhost:5000/v3/ --bootstrap-public-url http://3.14.134.38:5000/v3/ --bootstrap-region-id RegionOne
+ 1205  keystone-manage bootstrap --bootstrap-password admin1234 --bootstrap-admin-url http://localhost:5000/v3/ --bootstrap-internal-url http://localhost:5000/v3/ --bootstrap-public-url http://3.14.134.38:5000/v3/ --bootstrap-region-id RegionOne --bootstrap-user admin
+ 1206  keystone-manage bootstrap --bootstrap-password admin1234 --bootstrap-admin-url http://localhost:5000/v3/ --bootstrap-internal-url http://localhost:5000/v3/ --bootstrap-public-url http://3.14.134.38:5000/v3/ --bootstrap-region-id RegionOne --bootstrap-user snake
+ 1207  nano /etc/keystone/keystone.conf 
+ 1208  keystone-manage bootstrap --bootstrap-password admin1234 --bootstrap-admin-url http://localhost:5000/v3/ --bootstrap-internal-url http://localhost:5000/v3/ --bootstrap-public-url http://3.14.134.38:5000/v3/ --bootstrap-region-id RegionOne
+ 1209  keystone-manage -h
+ 1210  keystone-manage db_version
+ 1211  keystone-manage db_sync
+ 1212  keystone-manage doctor
+ 1213  less /etc/keystone/keystone.conf 
+ 1214  openstack user list
+ 1215  nano /etc/keystone/keystone.policy.yaml 
+ 1216  nano /etc/keystone/default_catalog.templates 
+ 1217  openstack user create --password-prompt --email alice@example.com alice
+ 1218  ls
+ 1219  ll /var/lib/keystone/
+ 1220  mv /var/lib/keystone/keystone.db{,prepopped.bak}
+ 1221  service apache2 restart
+ 1222  mv /var/lib/keystone/keystone.db{2bak,}
+ 1223  ls
+ 1224  service apache2 restart
+ 1225  keystone-manage bootstrap     --bootstrap-password admin1234     --bootstrap-username admin     --bootstrap-project-name admin-project     --bootstrap-role-name admin     --bootstrap-service-name keystone     --bootstrap-region-id RegionOne     --bootstrap-admin-url http://localhost:5000     --bootstrap-public-url http://localhost:5000     --bootstrap-internal-url http://localhost:5000
+ 1226  openstack user list
+ 1227  keystone-manage db_sync
+ 1228  keystone-manage bootstrap     --bootstrap-password admin1234     --bootstrap-username admin     --bootstrap-project-name admin-project     --bootstrap-role-name admin     --bootstrap-service-name keystone     --bootstrap-region-id RegionOne     --bootstrap-admin-url http://localhost:5000     --bootstrap-public-url http://localhost:5000     --bootstrap-internal-url http://localhost:5000
+ 1229  openstack user list
+ 1230  rm /var/lib/keystone/keystone.db
+ 1231  keystone-manage db_sync
+ 1232  keystone-manage bootstrap     --bootstrap-password admin1234     --bootstrap-username admin     --bootstrap-project-name admin-project     --bootstrap-role-name admin     --bootstrap-service-name keystone     --bootstrap-region-id RegionOne     --bootstrap-admin-url http://localhost:5000     --bootstrap-public-url http://localhost:5000     --bootstrap-internal-url http://localhost:5000
+ 1233  openstack user list
+ 1234  keystone-manage bootstrap     --bootstrap-password admin1234     --bootstrap-username admin     --bootstrap-project-name admin     --bootstrap-role-name admin     --bootstrap-service-name keystone     --bootstrap-region-id RegionOne     --bootstrap-admin-url http://localhost:5000     --bootstrap-public-url http://localhost:5000     --bootstrap-internal-url http://localhost:5000
+ 1235  openstack user list
+ 1236  openstack project list --os-username admin --os-project-name admin     --os-user-domain-id default --os-project-domain-id default     --os-identity-api-version 3 --os-auth-url http://localhost:5000 
+ 1237  openstack project list
+ 1238  openstack role list
+ 1239  openstack role -h
+ 1240  openstack role create _member_
+ 1241  ll /var/lib/keystone/keystone.db
+ 1242  sudo openstack role create _member_
+ 1243  sudo openstack role create _member_ --help
+ 1244  sudo openstack role create _member_
+ 1245  cat sourcadm 
+ 1246  openstack role create _member_
+ 1247  ll /var/lib/keystone/keystone.db
+ 1248  chmod o+x /var/lib/keystone/keystone.db
+ 1249  openstack role create _member_
+ 1250  ll /var/lib/keystone/keystone.db
+ 1251  chmod o-x /var/lib/keystone/keystone.db
+ 1252  chmod o+w /var/lib/keystone/keystone.db
+ 1253  openstack role create _member_
+ 1254  chmod o-w /var/lib/keystone/keystone.db
+ 1255  openstack user list
+ 1256  openstack project list
+ 1257  openstack project create --description 'first project. Refuse to create in horizon dash. however if you see this openstack client library worked" first_project_cli
+ 1258  openstack project create --description 'first project. Refuse to create in horizon dash. however if you see this openstack client library worked' first_project_cli
+ 1259  chmod 666 /var/lib/keystone/keystone.db
+ 1260  openstack project create --description 'first project. Refuse to create in horizon dash. however if you see this openstack client library worked' first_project_cli
+ 1261  openstack role create resellers
+ 1262  openstack role create hackernation
+ 1263  openstack role create TeenTitans
+ 1264  openstack role create CirocBoyz
+ 1265  openstack role create DrakeStans
+ 1266  openstack role create YeStans
+ 1267  less /etc/keystone/keystone.conf 
+ 1268  openstack service list
+ 1269  openstack endpoint list
+ 1270  tail /var/log/keystone/keystone-wsgi-public.log
+ 1271  echo "" > /var/log/keystone/keystone-wsgi-public.log
+ 1272  tail /var/log/keystone/keystone-wsgi-public.log
+ 1273  echo "" > /var/log/keystone/keystone-wsgi-public.log
+ 1274  tail -f $_
+ 1275  tail -f /var/log/keystone/keystone-wsgi-public.log
+ 1276  tail -f /var/log/keystone/keystone-wsgi-admin.log 
+ 1277  tail -f /var/log/keystone/keystone-manage.log
+ 1278  tail -f /var/log/keystone/keystone-wsgi-public.log
+ 1279  openstack service lists
+ 1280  openstack service list
+ 1281  source sourcadm 
+ 1282  openstack service list
+ 1283  cat sourcadm 
+ 1284  openstack project list
+ 1285  openstack project
+ 1286  openstack service list
+ 1287  openstack service create --name neutronal --description 'The Absolutely First Service I've Created Other Than keystone identity" network
+ 1288  openstack service create --name neutronal --description "The Absolutely First Service I've Created Other Than keystone identity" network
+ 1289  openstack service list
+ 1290  #openstack endpoint create neutronal public http://localhost/neutronal/neutron/v2.1
+ 1291  openstack service show
+ 1292  openstack service show network
+ 1293  openstack endpoint create neutronal public http://localhost/neutronal/neutronal/
+ 1294  curl http://localhost/neutronal/neutronal/
+ 1295  openstack project create service-users --domain default
+ 1296  apt search openstack*compute*
+ 1297  apt search *openstack*compute*
+ 1298  apt search .*openstack.*compute.*
+ 1299  apt install nova-compute
+ 1300  apt search .*openstack.*neutron.*
+ 1301  apt install nuetron-common
+ 1302  apt install neutron-common
+ 1303  apt install neutron-server neutron-plugin-ml2   neutron-linuxbridge-agent neutron-dhcp-agent   neutron-metadata-agent
+ 1304  apt search compute
+ 1305  apt search compute | less
+ 1306  apt search nova | less
+ 1307  apt show nova-api getdns glance
+ 1308  apt install  glance
+ 1309  apt search get-dns
+ 1310  apt search getdns
+ 1311  apt show getdns-utils
+ 1312  curl http://localhost:5000/v3/users/de3f1c06451c4747bf2af236a358d29c/projects
+ 1313  curl http://localhost:5000/v3//projects
+ 1314  openstack projects list
+ 1315  openstack project list
+ 1316  openstack project show
+ 1317  openstack project show 09ba5a612c39474bb87d316700baf434
+ 1318  ll /var/lib/keystone/keystone.db
+ 1319  openstack service show
+ 1320  openstack service list
+ 1321  openstack service create --name glancey --description "My First Glance Attempt OpSk Cli" glance
+ 1322  openstack service create --name glay --description "My First Glance Attempt OpSk Cli" glancesfbsb
+ 1323  openstack service delete --name glay
+ 1324  openstack service delete glay
+ 1325  openstack service create --name glancey2 --description "My Second Glance Attempt OpSk Cli - Made Sure To Set Type of Service to 'image'" image
+ 1326  openstack endpoint create glancey public localhost/glancey/
+ 1327  netstat -ltnp
+ 1328  ps -aux | grep 25421
+ 1329  openstack endpoint create glancey public localhost:9292/glancey/ --region RegionOne
+ 1330  openstack endpoint create glancey admin localhost:9292/glancey/ --region RegionOne
+ 1331  openstack endpoint create glancey internal localhost:9292/glancey/ --region RegionOne
+ 1332  nano /etc/glance/glance-api.conf
+ 1333  less /etc/glance/glance-api.conf
+ 1334  service apache2 restart
+ 1335  openstack user create --domain default --password-prompt glance
+ 1336  openstack role add --project service --user glance admin
+ 1337  openstack service list
+ 1338  openstack project list
+ 1339  openstack role add --project service-users --user glance admin
+ 1340  openstack endpoint list
+ 1341  openstack endpoint delete glancey
+ 1342  openstack endpoint list
+ 1343  openstack endpoint delete 45e98800b43d44fd9fe63bb59d37a9fd 2000ce20bf0e463390f8369534bfcc8c 42cfc6695a5f48c5adea20ab6b402ac3
+ 1344  openstack endpoint create --region RegionOne   glay public http://localhost:9292
+ 1345  openstack service list
+ 1346  openstack endpoint create --region RegionOne glancey public http://localhost:9292
+ 1347  openstack endpoint create --region RegionOne glancey2 public http://localhost:9292
+ 1348  openstack endpoint delete glancey
+ 1349  openstack endpoint list
+ 1350  openstack endpoint delete b581b38d8e574d3b921b51235e2591b5
+ 1351  curl localhost:9292
+ 1352  openstack service list
+ 1353  openstack endpoint create --region RegionOne glancey2 internal http://localhost:9292
+ 1354  openstack endpoint create --region RegionOne glancey2 admin http://localhost:9292
+ 1355  service apache2 restart
+ 1356  openstack endpoint create --region None glancey2 internal http://localhost:9292
+ 1357  openstack endpoint list
+ 1358  openstack endpoint delete 97a264a7c77c4b459f57f86df6e65996
+ 1359  openstack endpoint create glancey2 internal http://localhost:9292
+ 1360  openstack endpoint create glancey2 public http://localhost:9292
+ 1361  openstack endpoint create glancey2 admin http://localhost:9292
+ 1362  nano /etc/glance/glance-registry
+ 1363  nano /etc/glance/glance-registry.conf 
+ 1364  nano /etc/glance/glance-manage.conf 
+ 1365  less /var/log/glance/glance-registry.log 
+ 1366  less /var/log/glance/glance-api.log 
+ 1367  glance-manage -h
+ 1368  glance-manage db_version
+ 1369  glance-manage db sync
+ 1370  glance-manage 
+ 1371  glance-manage db
+ 1372  glance-manage db check
+ 1373  glance-manage db version_control
+ 1374  nano /etc/openstack-dashboard/local_settings.py 
+ 1375  nano /etc/neutron/neutron.conf 
+ 1376  neutron-db-manage
+ 1377  neutron-db-manage check_migration
+ 1378  neutron-db-manage revision
+ 1379  neutron-db-manage
+ 1380  neutron-db-manage current
+ 1381  neutron-db-manage stamp
+ 1382  neutron-db-manage stamp revision
+ 1383  locate neutron.db
+ 1384  ls
+ 1385  locate neutron
+ 1386  locate neutron | grep db
+ 1387  locate neutron | grep \.db
+ 1388  locate neutron | grep .db
+ 1389  locate neutron | grep "\.db"
+ 1390  locate neutron | grep ".db"
+ 1391  locate neutron | grep ".*\.db"
+ 1392  locate neutron | grep ".*\.db*"
+ 1393  locate neutron | grep ".*\.db"
+ 1394  less /var/log/neutron/neutron-server.log 
+ 1395  neutron
+ 1396  neutron --help
+ 1397  neutron-server 
+ 1398  neutron-server -h
+ 1399  neutron-server -d
+ 1400  man neutron-db-manage 
+ 1401  neutron-db-manage -h
+ 1402  qless /etc/neutron/neutron.conf 
+ 1403  less /etc/neutron/neutron.conf 
+ 1404  ll /var/lib/neutron/neutron.sqlite 
+ 1405  chmod +w /var/lib/neutron/neutron.sqlite 
+ 1406  neutron-server 
+ 1407  neutron-db-manage upgrade
+ 1408  neutron-db-manage
+ 1409  neutron-db-manage current --verbose
+ 1410  neutron-db-manage upgrade heads
+ 1411  neutron-db-manage current --verbose
+ 1412  touch /tmp/teutron.sqlite
+ 1413  neutron-db-manage check --config-file=/tmp/teutron.sqlite
+ 1414  neutron-db-manage check_migration --config-file=/tmp/teutron.sqlite
+ 1415  neutron-db-manage check_migration --config-file /tmp/teutron.sqlite
+ 1416  neutron-db-manage --config-file /tmp/teutron.sqlite check_migration
+ 1417  neutron-db-manage --config-file /tmp/teutron.sqlite upgrade heads
+ 1418  neutron-db-manage --config-file /tmp/teutron.sqlite current
+ 1419  neutron-db-manage --config-file /tmp/teutron.sqlite upgrade --expand
+ 1420  neutron-db-manage upgrade --expand
+ 1421  less /etc/neutron/neutron.conf 
+ 1422  cd /tmp
+ 1423  su -s /bin/sh -c "neutron-db-manage --config-file /etc/neutron/neutron.conf \
+ 1424    --config-file /etc/neutron/plugins/ml2/ml2_conf.ini upgrade head --sql" neutron > txt.sqlite
+ 1425  less txt.sqlite 
+ 1426  su -s /bin/sh -c "neutron-db-manage --database-connection mysql+pymysql://root:root@127.0.0.1/neutron?charset=utf8 \
+ 1427  upgrade head --sql" neutron > txt.mysql
+ 1428  less txt.mysql 
+ 1429  neutron-db-manage upgrade --expand
+ 1430  neutron-db-manage upgrade --expand --sql
+ 1431  neutron-db-manage upgrade --expand
+ 1432  ls
+ 1433  mkdir lite
+ 1434  cd lite
+ 1435  neutron-db-manage upgrade --expand --sql --verbose
+ 1436  neutron-db-manage upgrade --expand --sql 
+ 1437  ls
+ 1438  neutron-db-manage upgrade --expand 
+ 1439  sqlite3
+ 1440  cp /var/lib/neutron/neutron.sqlite .
+ 1441  sqlite3 neutron.sqlite 
+ 1442  neutron-db-manage upgrade --expand 
+ 1443  neutron-db-manage
+ 1444  neutron-db-manage branches
+ 1445  neutron-db-manage has_offline_migrations
+ 1446  sqlite3 neutron.sqlite 
+ 1447  ls
+ 1448  neutron-db-manage --config-file ./neutron.sqlite upgrade --expand
+ 1449  neutron-db-manage -h
+ 1450  neutron-db-manage --database-connection sqlite:////neutron.sqlite upgrade --expand
+ 1451  neutron-db-manage --database-connection sqlite:////neutron.sqlite upgrade --expand --database-engine sqlite
+ 1452  neutron-db-manage --database-engine sqlite --database-connection sqlite:////neutron.sqlite upgrade --expand 
+ 1453  sqlite3 neutron.sqlite 
+ 1454  nano /etc/neutron/plugins/ml2/ml2_conf.ini
+ 1455  sqlite3 
+ 1456  sqlite3 neutron.sqlite 
+ 1457  ls
+ 1458  ls -l neutron.sqlite 
+ 1459  chmod +w neutron.sqlite 
+ 1460  chown neutron neutron.sqlite 
+ 1461  chogrp neutron neutron.sqlite 
+ 1462  chgrp neutron neutron.sqlite 
+ 1463  mv /var/lib/neutron/neutron.sqlite{,.orig-crash.bak}
+ 1464  mv /var/lib/neutron/
+ 1465  ll /var/lib/neutron/
+ 1466  mv neutron.sqlite $_
+ 1467  ls
+ 1468  neutron-db-manage 
+ 1469  neutron-db-manage current
+ 1470  neutron-db-manage check_migration
+ 1471  less /var/log/neutron/neutron-server.log 
+ 1472  neutron-db-manage upgrade --expand 
+ 1473  service neutron-server restart
+ 1474  service neutron-fr restart
+ 1475  service apache2 restart
+ 1476  nano /etc/neutron/ls
+ 1477  ls
+ 1478  nano /etc/neutron/neutron.conf 
+ 1479  less /etc/neutron/neutron.conf 
+ 1480  su -s /bin/sh -c "neutron-db-manage --database-connection mysql+pymysql://root:root@127.0.0.1/neutron?charset=utf8 \
+ 1481  upgrade head --sql" neutron > txt.mysql
+ 1482  ls
+ 1483  less txt.mysql 
+ 1484  neutron-db-manage --database-connection
+ 1485  su -s /bin/sh -c "neutron-db-manage --database-connection mysql+pymysql://root:secret@127.0.0.1/neutron?charset=utf8 \
+ 1486  upgrade head --sql" neutron > txt.mysql
+ 1487  ls
+ 1488  cd
+ 1489  df -h
+ 1490  fdisk -l
+ 1491  reboot now
+ 1492  ls
+ 1493  source sourcadm 
+ 1494  ls
+ 1495  netstat -ltnp
+ 1496  man gencomp
+ 1497  gencomp -u
+ 1498  getconf
+ 1499  getconf -u
+ 1500  man compgen
+ 1501  curl ifconfig.me
+ 1502  df -h
+ 1503  info gencomp
+ 1504  compgen
+ 1505  info compgen
+ 1506  gencomp -u
+ 1507  compgen -u
+ 1508  gencomp -h
+ 1509  compgen -h
+ 1510  help compgen
+ 1511  compgen open
+ 1512  compgen -C open
+ 1513  wget http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img
+ 1514  openstack image create --mindisk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img 
+ 1515  openstack image create --min-disk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img 
+ 1516  openstack image create --min-disk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1517  nano wolf-daspanzerteam.rc
+ 1518  openstack service list
+ 1519  openstack endpoint list
+ 1520  openstack image create --min-disk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1521  less /var/log/glance/glance-api.log
+ 1522  less /var/log/glance/glance-api.log.1 
+ 1523  nano /etc/glance/policy.json 
+ 1524  glance-cache-manage -h
+ 1525  glance-cache-manage --list-cached
+ 1526  glance-manage -h
+ 1527  glance-manage -h db version
+ 1528  glance-manage -h db_version
+ 1529  glance-manage -h db_sync
+ 1530  glance-manage db_sync
+ 1531  glance-manage -h
+ 1532  glance-manage db
+ 1533  glance-manage db check
+ 1534  glance-manage db expand
+ 1535  glance-manage db check
+ 1536  glance-manage -h
+ 1537  glance-manage db_migrate
+ 1538  glance-manage db expand
+ 1539  ll /var/lib/glance/glance.sqlite 
+ 1540  mv /var/lib/glance/glance.sqlite{,bad.bak} 
+ 1541  glance-manage db check
+ 1542  glance-manage db expand
+ 1543  glance-manage db check
+ 1544  glance-manage db contract
+ 1545  glance-manage db check
+ 1546  ls /var/log/glance/glance-registry.log
+ 1547  cat /var/log/glance/glance-registry.log
+ 1548  echo "" > /var/log/glance/glance-api.log /var/log/glance/glance-api.log.1 
+ 1549  less /log/glance/glance-api.log /var/log/glance/glance-api.log.1 
+ 1550  less /log/glance/glance-api.log
+ 1551  less /var/log/glance/glance-api.log
+ 1552  rm  /var/log/glance/glance-api.log.1 
+ 1553  openstack image create --min-disk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1554  less /var/log/glance/glance-api.log 
+ 1555  openstack service list
+ 1556  openstack endpoint list
+ 1557  source sourcadm 
+ 1558  openstack endpoint list
+ 1559  openstack users list
+ 1560  openstack user list
+ 1561  openstack usershow admin
+ 1562  openstack user show admin
+ 1563  openstack role show
+ 1564  openstack role list
+ 1565  openstack role show admin
+ 1566  openstack role s
+ 1567  openstack role admin
+ 1568  openstack role assignment list admin
+ 1569  openstack role assignment list --user admin
+ 1570  openstack role assignment list --user admin --names
+ 1571  openstack role assignment list --user wolf --names
+ 1572  openstack image create --min-disk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1573  nano /etc/glance/policy.json 
+ 1574  openstack image create --min-disk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1575  less /var/log/glance/glance-api.log 
+ 1576  openstack endpoint list
+ 1577  openstack endpoint list -h
+ 1578  curl  http://localhost:9292 
+ 1579  openstack endpoint list -h
+ 1580  openstack endpoint list 
+ 1581  openstack endpoint create glance admin http://localhost:9292
+ 1582  openstack endpoint create glance public http://localhost:9292
+ 1583  openstack endpoint create glance internal http://localhost:9292
+ 1584  openstack endpoint list 
+ 1585  openstack service list
+ 1586  less /etc/glance/glance-api
+ 1587  openstack endpoint delete afc7e7fda7834e829c4ccfee4f36684a 4a6b3eb0fe3a441c9e49d55f5393e56f 547cc8cb8cf24593939ccde9b75367f3 4c0413c3f0cf487f9fcfec0c3a1d685e ce8d1fb258a3454eb06414bec3c9ee9d 794b7248267647d9803a760118665cd2 d96691e2868d4ca9b759983a6ba18ff0 aa3ed20c04ad425f8a6270977ac0779a 9a94e9892ea94fff9706c9cdea9bfd3c
+ 1588  openstack service delete glancey
+ 1589  openstack service delete glancey2
+ 1590  openstack service add glance -h
+ 1591  openstack service create -h
+ 1592  openstack role assignment glance --names
+ 1593  openstack role assignment glance
+ 1594  openstack role assignment list --user glance --names
+ 1595  openstack service create --name glance   --description "OpenStack Image sERVICE cREADTEDED" image
+ 1596  openstack service create --name glance \
+ 1597  openstack endpoint create image public localhost:9292
+ 1598  openstack endpoint create image admin localhost:9292
+ 1599  openstack endpoint create image internal localhost:9292
+ 1600  service glance
+ 1601  systemctl
+ 1602  service glance-api restart
+ 1603  service glance-regist restart
+ 1604  service glance-registry restart
+ 1605  openstack service list
+ 1606  openstack image create --min-disk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1607  openstack endpoint
+ 1608  openstack endpoint list
+ 1609  openstack endpoint set
+ 1610  openstack endpoint set --url http://localhost:9292 57370cd9856f4b5fbb665324377e40ea 5e7d8ac44aa042f7ac5bfc31a4f590b7 c6278f9a51954acba994451acd5b6def
+ 1611  openstack endpoint list
+ 1612  openstack endpoint set --url http://localhost:9292 57370cd9856f4b5fbb665324377e40ea
+ 1613  openstack endpoint set --url http://localhost:9292 {5e7d8ac44aa042f7ac5bfc31a4f590b7,c6278f9a51954acba994451acd5b6def}
+ 1614  openstack endpoint list
+ 1615  openstack endpoint set --url http://localhost:9292 5e7d8ac44aa042f7ac5bfc31a4f590b7
+ 1616  openstack endpoint set --url http://localhost:9292 c6278f9a51954acba994451acd5b6def
+ 1617  openstack image create --min-disk 1 --public --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1618  openstack endpoint list
+ 1619  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1620  nano /etc/glance/glance-api.conf 
+ 1621  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1622  nano /etc/glance/glance-api-paste.ini 
+ 1623  nano /etc/glance/glance-api.conf 
+ 1624  nano /etc/glance/glance-api-paste.ini 
+ 1625  less $_
+ 1626  service glance-registry restart
+ 1627  service glance-api restart
+ 1628  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1629  service glance-registry status
+ 1630  service glance-api status
+ 1631  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1632  curl localhost:9292
+ 1633  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1634  reboot now
+ 1635  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1636  source sourcadm 
+ 1637  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test
+ 1638  less /etc/glance/glance-api
+ 1639  less /etc/glance/glance-api.conf 
+ 1640  getent
+ 1641  getent --usage
+ 1642  man getent 
+ 1643  getent group
+ 1644  getent gshadow
+ 1645  ls
+ 1646  nano /etc/glance/glance-manage.conf 
+ 1647  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test &
+ 1648  less /var/log/glance/glance-api.log 
+ 1649  netstat -ltnp
+ 1650  less /var/log/glance/glance-api.log 
+ 1651  less /etc/keystone/keystone.conf 
+ 1652  systemctl
+ 1653  ls
+ 1654  source wolf-daspanzerteam.rc 
+ 1655  nano wolf-daspanzerteam.rc 
+ 1656  source wolf-daspanzerteam.rc 
+ 1657  nano wolf-daspanzerteam.rc 
+ 1658  source wolf-daspanzerteam.rc 
+ 1659  nano wolf-daspanzerteam.rc 
+ 1660  source wolf-daspanzerteam.rc 
+ 1661  nano wolf-daspanzerteam.rc 
+ 1662  source wolf-daspanzerteam.rc 
+ 1663  nano wolf-daspanzerteam.rc 
+ 1664  source wolf-daspanzerteam.rc 
+ 1665  nano wolf-daspanzerteam.rc 
+ 1666  tail sourcadm 
+ 1667  export PS1='[\u@\h \W(keystone_admin)]\$ '
+ 1668  tail sourcadm 
+ 1669  nano wolf-daspanzerteam.rc 
+ 1670  source wolf-daspanzerteam.rc 
+ 1671  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test &
+ 1672  jobs
+ 1673  fg
+ 1674  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test --debug
+ 1675  curl http://localhost:9292
+ 1676  curl http://localhost:9292/v2/image/
+ 1677  curl http://localhost:9292/v2/image/schemas
+ 1678  pgrep -f glance
+ 1679  pgrep -af glance
+ 1680  openstack user set --password glance glance
+ 1681  source sourcadm 
+ 1682  openstack user set --password glance glance
+ 1683  openstack project list --names | grep 09ba5a612c39474bb87d316700baf434
+ 1684  openstack project list --names 
+ 1685  openstack project list
+ 1686  openstack -h
+ 1687  df -h
+ 1688  less sourcadm 
+ 1689  export OS_PROJECT_DOMAIN_ID=default
+ 1690  openstack project list
+ 1691  ll /var/lib/keystone/keystone.db
+ 1692  curl http://3.14.134.38/horizon/
+ 1693  curl http://3.14.134.38/horizon/auth/login/
+ 1694  load
+ 1695  top
+ 1696  service neutron stop
+ 1697  pkill neutron
+ 1698  top
+ 1699  openstack project list
+ 1700  env
+ 1701  unset OS_PROJECT_ID
+ 1702  env
+ 1703  openstack project list
+ 1704  openstack user set --password glance glance
+ 1705  openstack image create --min-disk 1 --disk-format qcow2 --file cirros-0.4.0-x86_64-disk.img Cirr_OS_x64_Test --debug
+ 1706  curl -g -i -X GET -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'User-Agent: python-glanceclient' -H 'Connection: keep-alive' -H 'X-Auth-Token: {SHA1}6ae85aa6dd082973cccd867fa26b687ad37b71e6' -H 'Content-Type: application/octet-stream' http://localhost:9292/v2/schemas/image
+ 1707  curl -g -i -X GET -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'User-Agent: python-glanceclient' -H 'Connection: keep-alive' -H 'X-Auth-Token: {SHA1}6ae85aa6dd082973cccd867fa26b687ad37b71e6' -H 'Content-Type: application/octet-stream' http://`curl ifconfig.me`:9292/v2/schemas/image
+ 1708  ls
+ 1709  mkdir sal
+ 1710  cd sal
+ 1711  git clone https://github.com/SavSanta/scratch-repo
+ 1712  ls
+ 1713  cd ..
+ 1714  ls
+ 1715  mv sourcadm admin-source-openstack.rc
+ 1716  cp mkdir OpenStackStuff
+ 1717  ls
+ 1718  mv *.rc OpenStackStuff/
+ 1719  ls KubeStuff/
+ 1720  cp /etc/keystone/keystone.conf OpenStackStuff/
+ 1721  cp /etc/openstack-dashboard/local_settings.py OpenStackStuff/
+ 1722  ls
+ 1723  history
+ 1724  cd sal/
+ 1725  ls
+ 1726  cd scratch-repo/
+ 1727  mv ../../KubeStuff/ 
+ 1728  ls
+ 1729  mv -r ../../KubeStuff/ ./
+ 1730  mv -R ../../KubeStuff/ ./
+ 1731  mv ../../KubeStuff/ ./
+ 1732  mv ../../OpenStackStuff/ ./
+ 1733  history
+ 1734  history > OpenStackStuff/history.hst

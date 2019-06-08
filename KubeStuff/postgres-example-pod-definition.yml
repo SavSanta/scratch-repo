@@ -1,0 +1,20 @@
+# Pod Definition Example For Kubernetes using mostly tabs to space it out
+
+apiVersion: v1 
+kind: Pod 
+metadata:
+    name: postgres
+    labels:
+	owner: SavSanta
+	yaml_cdate: 20190525
+        tier: db-tier 
+	production_use: false
+spec:
+    containers:
+        - name: postgres
+          image: postgres
+	 env:
+        - name: POSTGRES_PASSWORD
+          value: mycleartextpassword
+        - name: POSTGRES_USER
+          value: psql_admin

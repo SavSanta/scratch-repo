@@ -1,0 +1,12 @@
+export OS_USERNAME=admin
+export OS_PASSWORD=admin1234
+export OS_PROJECT_NAME=admin
+export OS_USER_DOMAIN_ID=default
+export OS_PROJECT_DOMAIN_ID=default
+export OS_IDENTITY_API_VERSION=3
+export OS_AUTH_URL=http://localhost:5000/v3
+export PS1='[\u@\h \W(keystone_admin)]\$ '
+
+# Doesnt seem to work
+#export OS_TOKEN=294a4c8a8a475f9b9836
+
