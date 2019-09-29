@@ -1,6 +1,6 @@
 !#/usr/bin/env bash
 
-# TODO: Make pager friendly
+# TODO: Make pager friendly. (ie utilize math against $LINES to repeat header every few for long files)
 # TODO: Investigate if use of env to pull background color option for switched ANSI colorized header :D
 
 
