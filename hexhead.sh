@@ -1,3 +1,9 @@
+!#/usr/bin/env bash
+
+# TODO: Make pager friendly
+# TODO: Investigate if use of env to pull background color option for switched ANSI colorized header :D
+
+
 function hexhead()
 {
 
@@ -14,11 +20,14 @@ do
     
     # Use the power of zero-width and printf to make a divider header. One of many options
     printf '%.0s-' $(seq $counted)
+    printf '\n'
     
     # This will call regular xxd for bash paramater. Though, Im thinking I should change this to '"$*"'
     # because I often pass xxd specific options to xxd and thusly the shift and for-loop properties need to be refactored
+    
     xxd $1 
-    shift 
+    shift
+    
 done
 
 }
