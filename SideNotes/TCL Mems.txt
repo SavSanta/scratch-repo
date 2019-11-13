@@ -1,0 +1,15 @@
+1. Discovered the Pain that is in array, you can not use a comment in the middle of them with a space. It must be unspaced. ie:
+
+    array set Actions {
+		        FLICK  "touch flick"
+
+		        #HTML 5
+		        EXECUTE_SQL  "execute SQL"
+
+		        GET_LOCATION  "get location"
+               }
+
+The line "#HTML 5" is valid but "# HTML 5" will produce headaches. 
+
+
+2. The brackets are still counted in comments, you should make sure that they are evenly matched to stave off trouble.
