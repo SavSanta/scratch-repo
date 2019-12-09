@@ -12,4 +12,6 @@
 The line "#HTML 5" is valid but "# HTML 5" will produce headaches. 
 
 
-2. The brackets are still counted in comments, you should make sure that they are evenly matched to stave off trouble.
+2. The brackets are still counted in comments (as they are treated as commands), you should make sure that they are evenly matched to stave off trouble.
+
+3. If statements body opening brace can not be separated onto a new line. Yay!
