@@ -1,0 +1,40 @@
+#!/usr/bin/env expect -f
+
+# Usage sshexpect <username> <remoteip> <port>
+
+# Grab the argv's
+set username [lindex $argv 0]
+set remoteip [lindex $argv 1]
+set port [lindex $argv 2]
+
+# Check if empty and if not just join the value with a colon. 
+# additional regex for \d+ can be done later
+if {$port -eq ""} {
+  set port ":22"
+  } else {
+      set port [string cat ":" $port]
+  }
+
+# Set timeout to 20
+set timeout 20
+
+# Connect to my server and check for the prompt
+spawn ssh $username@$remoteip$port
+expect "*password:"
+
+# Hardcode method for tests
+# If prompt matches send the password "TEST_PASS" and send the carriage return
+# send -- "TEST_PASS\r"
+
+# Read from STDIN, make sure to de-enable echo on psuedoterminal
+stty -echo
+send_user -- "Provide SSH Password: "
+expect_user -re "(.*)\n"
+set password $expect_out(1,string)
+send "$expect_out(1,string)\r"
+stty echo
+
+# Put the date and time of completion
+puts stderr "\n\n The Expect script provided password at --> [clock format [clock seconds] -format "%I:%m %b %d %y"]"
+
+expect eof
