@@ -1,0 +1,7 @@
+# GTK CSS for Scrollbars in GTK+ 2.0 and GTK+ 3.0 for scrollbars
+* {
+-GtkScrollbar-has-backward-stepper: 1;
+-GtkScrollbar-has-forward-stepper: 1;
+-GtkRange-slider-width: 12;
+
+}
