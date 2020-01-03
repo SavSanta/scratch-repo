@@ -15,48 +15,57 @@
 # For now one should make sure that <span> tags (and anything else) is using single quotes before processing
 
 
-if {$argc == 0 || $argc > 1 } {puts stderr "Please supply a single target file"; exit -1}
+if {
+    $argc == 0 || $argc > 1
+} {
+    puts stderr "Please supply a single target file";
+    exit - 1
+}
 
-set filename [open [lindex $argv 0] "r"]
-set tempfile [open [string cat "/tmp/temp-" [file tail [lindex $argv 0]]] "w"]
+set filename[open[lindex $argv 0]
+    "r"]
+set tempfile[open[string cat "/tmp/temp-" [file tail[lindex $argv 0]]]
+    "w"]
 set lineno 0
 
-while {[gets $filename line] >= 0} {
-set lineno [expr {$lineno + 1}]
+while {
+    [gets $filename line] >= 0
+} {
+    set lineno[expr {
+        $lineno + 1
+    }]
 
-if [string match "*\=\ global::Mono.Unix.Catalog.GetString(\"*" $line] {
+    if [string match "*\=\ global::Mono.Unix.Catalog.GetString(\"*"
+        $line
+    ] {
 
-puts "Found Type 1 match on Line $lineno"
-set splitted [split $line \=]
-set target [lindex $splitted 1]
+        puts "Found Type 1 match on Line $lineno"
+        set splitted[split $line\ = ]
+        set target[lindex $splitted 1]
 
-set firstq [string first \" $target]
-set lastq [string last \" $target]
+        set firstq[string first\ " $target]
+                set lastq[string last\ " $target]
 
-set newtext [string range $target $firstq $lastq]
-set splitted [lreplace $splitted 1 1 $newtext]
-set line [join $splitted "= "]
+                    set newtext[string range $target $firstq $lastq] set splitted[lreplace $splitted 1 1 $newtext] set line[join $splitted "= "]
 
+                }
+                elseif[string match "*,\ global::Mono.Unix.Catalog.GetString(*"
+                    $line] {
 
-} elseif [string match "*,\ global::Mono.Unix.Catalog.GetString(*" $line] {
+                    puts "Found Type 2 match on Line $lineno"
+                    set splitted[split $line ","]
+                    set target[lindex $splitted 1]
 
-puts "Found Type 2 match on Line $lineno"
-set splitted [split $line ","]
-set target [lindex $splitted 1]
+                    set firstq[string first\ " $target]
+                        set lastq[string last\ " $target]
 
-set firstq [string first \" $target]
-set lastq [string last \" $target]
+                            set newtext[string range $target $firstq $lastq] set splitted[lreplace $splitted 1 1 $newtext] set line[join $splitted ", "]
+                        }
 
-set newtext [string range $target $firstq $lastq]
-set splitted [lreplace $splitted 1 1 $newtext]
-set line [join $splitted ", "]
-}
+                        puts $tempfile $line
 
-puts $tempfile $line
+                    }
 
-}
-
-close $filename
-close $tempfile
-exit 0
-
+                    close $filename
+                    close $tempfile
+                    exit 0
