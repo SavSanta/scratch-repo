@@ -1,8 +1,11 @@
 These are the assembly data types in the '.data' initialized variable sections:
 
-Assembly      use symbol  space
+Assembly     keyword      memory
 
 Byte          db	        1-byte	(8 bits)
 Word          dw	        2-bytes	(16 bits)
 Doubleword    dd	        4-bytes	(32 bits)
 Quadword      dq	        8-bytes	(64 bits)
+
+
+You write the keyword in the .data section for usage
