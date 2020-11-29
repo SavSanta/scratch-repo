@@ -1,6 +1,8 @@
 ; nasm compile instructions
-; Step1) nasm -felf64 <this-nasm-file.nasm> -o <your-objectfile.o>
-; Step2) ld <your-objectfile.o> -o finalbinary
+    ; Step 1 - Compile to Object File (this is 64-bit elf
+       ; nasm -felf64 <this-nasm-file.nasm> -o <your-objectfile.o>
+    ; Step 2  - Initiate linker
+       ; ld <your-objectfile.o> -o finalbinary
 
 global _start
 
