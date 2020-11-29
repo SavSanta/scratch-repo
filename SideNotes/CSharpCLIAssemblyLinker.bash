@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Run this in ~/.config/csharp to automatically link the system assembly
-# for the csharp live interpreter
+# for the csharp REPL interpreter
 #
 
 
