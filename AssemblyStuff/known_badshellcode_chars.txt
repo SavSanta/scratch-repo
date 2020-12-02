@@ -1,0 +1,11 @@
+Known bad chars when coverting machine code to shellcode by hand
+
+
+    00: This is the zero value or null terminator (\0)
+    0A: This is the line feed (\n)
+    FF: This is the form feed (\f)
+    0D: This is the carriage return (\r)
+    
+   
+   
+Methods to alternatively get rid of them:
