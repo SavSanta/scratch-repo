@@ -1,0 +1,15 @@
+Clear up one minor issue with conceptualizing the stack (which grows downward from high to lower addresses by the way)
+
+
+# Relevant Example of placing stuck on the stack.
+# Give that $rsp is whever in memory
+
+  4000ad:       c7 44 24 fc 8a 11 11    mov    DWORD PTR [rsp-0x4],0x1111118a     ; Copy the value ONTO THE STACK. However notice here we us the pointer to the stack and subtract 4 bytes. 4 bytes because the value takes up exactly 4 bytes (2 bytes per digit pair)
+  4000b4:       11 
+  4000b5:       81 6c 24 fc 0b 10 10    sub    DWORD PTR [rsp-0x4],0x1010100b
+  4000bc:       10 
+  4000bd:       66 c7 44 24 fa 79 68    mov    WORD PTR [rsp-0x6],0x6879
+  4000c4:       66 81 44 24 fa 01 01    add    WORD PTR [rsp-0x6],0x101
+  4000cb:       89 44 24 f6             mov    DWORD PTR [rsp-0xa],eax
+  4000cf:       c6 44 24 f8 01          mov    BYTE PTR [rsp-0x8],0x1
+  4000d4:       fe 44 24 f8             inc    BYTE PTR [rsp-0x8]
