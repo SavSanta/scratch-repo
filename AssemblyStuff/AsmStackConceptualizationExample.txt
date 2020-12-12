@@ -12,7 +12,7 @@ Clear up one minor issue with conceptualizing the stack (which grows downward fr
   4000bd:       66 c7 44 24 fa 79 68    mov    WORD PTR [rsp-0x6],0x6879           ; we place this lower on the stack ((-4)+(-2)=-6). Notice it's 2 bytes more. The data value is 2 bytes
   4000c4:       66 81 44 24 fa 01 01    add    WORD PTR [rsp-0x6],0x101
   4000cb:       89 44 24 f6             mov    DWORD PTR [rsp-0xa],eax             ; NOTE that we place this data 10 bytes lower in the stack. Hex 0xA = decimal 10. I think they couldve used the decimal number here too but I'd need to verify again.
-  4000cf:       c6 44 24 f8 01          mov    BYTE PTR [rsp-0x8],0x1                  ; This is affecting the 8 bytes lower in the stack. SO TECHNICALLY data is right before the last instruction. Why they did it out of order? Not sure
+  4000cf:       c6 44 24 f8 01          mov    BYTE PTR [rsp-0x8],0x1                  ; This is affecting the 8 bytes lower in the stack. SO ACTUALLY data on the stack is right before the last instruction. Why they did it out of order? Not sure
   4000d4:       fe 44 24 f8             inc    BYTE PTR [rsp-0x8]
 
 
