@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"net/http"
-	"golang-fifa-world-cup-web-service/data"
+	"pluralsight-fifa-websvc/data"
 )
 
 // RootHandler returns an empty body status code
