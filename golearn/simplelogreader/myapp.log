@@ -1,0 +1,22 @@
+
+2019-09-29 14:22:50,394 TRACE [main] c.d.MyApp1 [MyApp1.java:23] Entering application.
+2019-09-29 14:22:50,398 DEBUG [main] c.d.MyApp1 [MyApp1.java:24] Entering application.
+2019-09-29 14:22:50,398 INFO [main] c.d.MyApp1 [MyApp1.java:25] Entering application.
+2019-09-29 14:22:50,398 WARN [main] c.d.MyApp1 [MyApp1.java:26] Entering application.
+2019-09-29 14:22:50,399 ERROR [main] c.d.MyApp1 [MyApp1.java:27] Entering application.
+2019-09-29 14:30:11,238 TRACE [main] c.d.MyApp1 [MyApp1.java:23] Entering application.
+2019-09-29 14:30:11,242 DEBUG [main] c.d.MyApp1 [MyApp1.java:24] Entering application.
+2019-09-29 14:30:11,243 INFO [main] c.d.MyApp1 [MyApp1.java:25] Entering application.
+2019-09-29 14:30:11,243 WARN [main] c.d.MyApp1 [MyApp1.java:26] Entering application.
+2019-09-29 14:30:11,281 ERROR [main] c.d.MyApp1 [MyApp1.java:27] Entering application.
+2019-09-29 14:52:12,772 TRACE [main] c.d.MyApp1 [MyApp1.java:10] Entering application.
+2019-09-29 14:52:12,777 DEBUG [main] c.d.MyApp1 [MyApp1.java:11] Entering application.
+2019-09-29 14:52:12,777 INFO [main] c.d.MyApp1 [MyApp1.java:12] Entering application.
+2019-09-29 14:52:12,777 WARN [main] c.d.MyApp1 [MyApp1.java:13] Entering application.
+2019-09-29 14:52:12,777 ERROR [main] c.d.MyApp1 [MyApp1.java:14] Entering application.
+2019-09-29 15:30:11,238 TRACE [main] c.d.MyApp1 [MyApp1.java:23] Entering application.
+2019-09-29 17:03:11,238 TRACE [main] c.d.MyApp1 [MyApp1.java:23] Entering application.
+2019-09-29 18:32:11,238 CRITICAL [main] c.d.MyApp1 [MyApp1.java:23] Entering application.
+2019-09-29 14:30:11,238 TRACE [main] c.d.MyApp1 [MyApp1.java:23] Entering application.
+
+
