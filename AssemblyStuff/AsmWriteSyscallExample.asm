@@ -16,8 +16,8 @@ _start:
     ; move write syscall into RAX
     mov rax, 1
 
-    ; fd is normal inpyt/ output / or sterr numbers (0, 1, 2).
-    ; write to  std outpu of cours so move value of 1 to first parameter of ri
+    ; fd is normal input/ output / or stderr numbers (0, 1, 2).
+    ; write to  std output of course so move value of 1 to first parameter of ri
     mov rdi, 1
 
     ; the second argument, has to be *a pointer* to the string we want to print out 
