@@ -15,7 +15,7 @@ func RootHandler(res http.ResponseWriter, req *http.Request) {
 // ListWinners returns winners from the list
 func ListWinners(res http.ResponseWriter, req *http.Request) {
 
-	req.Header.Set("Content-Type", "application/json")
+	req.Header().Set("Content-Type", "application/json")
 
 	// Read a supplied year value from query parameter. Should sanitize
 	year := req.URL.Query().Get("year")
