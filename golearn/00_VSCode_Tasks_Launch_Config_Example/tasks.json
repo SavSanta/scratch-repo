@@ -1,0 +1,68 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo Hello",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "showReuseMessage": false,
+                "clear": false,
+                "panel": "new"
+            },
+            "command": "go",
+            "label": "Go build",
+            "args": [
+                "build",
+                "."
+            ],
+            "group": "none"
+        },
+        {
+            "type": "shell",
+            "echoCommand": true,
+            "command": "go",
+            "label": "Go run",
+            "args": [
+                "run",
+                "${file}",
+                "-s"
+            ],
+            "group": "none"
+        },
+        {
+            "label": "Exec Remote TDL Server Debugger",
+            "type": "shell",
+            "command": "dlv",
+            "args": [
+                "debug",
+                "--headless",
+                "--listen=:2345",
+                "--api-version=2",
+                "--log",
+                "."
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "showReuseMessage": false,
+                "clear": true,
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$go"
+            ]
+        }
+    ]
+}

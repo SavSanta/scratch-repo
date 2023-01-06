@@ -1,0 +1,36 @@
+{
+
+    "version": "2.0.0",
+
+
+    "configurations": [
+
+        /*   Local Debugging */
+        {
+            
+            "name": "Launch Local Cached TDL dl",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}",
+             "args": ["dl", "-n", "quickstart", "-f", "tdl-export.json"],
+            
+        },
+/*
+        {
+			"name": "Attach To Remote TDL Server",
+			"type": "go",
+			"request": "attach",
+			"mode": "remote",
+			"remotePath": "",
+			"port":2345,
+			"host":"127.0.0.1",
+			"showLog": true,
+			"trace": "log",
+			"logOutput": "rpc",
+            "console": "externalTerminal",
+		}
+*/
+
+    ]
+}
