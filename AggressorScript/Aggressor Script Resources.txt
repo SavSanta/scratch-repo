@@ -1,0 +1,17 @@
+Aggressor Scripting Resources
+
+https://www.networksgroup.com/blog/aggressor-101-unleashing-cobalt-strike-for-fun-and-profit
+https://medium.com/@001SPARTaN/cobalt-strike-visualizations-e6a6e841e16b
+https://github.com/001SPARTaN/aggressor_scripts/blob/master/visualizations/vis.cna
+https://github.com/001SPARTaN/aggressor_scripts/blob/master/visualizations/logvis.cna#L66   <- Setup a TableListener
+https://github.com/rsmudge/armitage/blob/c8ca6c00b5584444ef3c3a8e32341f43974567bd/scripts/downloads.sl#L90
+https://github.com/harleyQu1nn/AggressorScripts/blob/master/EDR.cna
+https://github.com/bluscreenofjeff/AggressorScripts/blob/086da8fd2449f32e2e8cc80ca8c8ccbe28317af9/mimikatz-every-30m.cna#L24
+https://gist.github.com/am0nsec/e8c86a249368b46a071d99be44605cc5#file-load_aggressor_script-cna-L11
+https://gist.github.com/rsmudge/67a1293b665f80e54675c95d94525281
+https://github.com/rsmudge/armitage/blob/c8ca6c00b5584444ef3c3a8e32341f43974567bd/scripts-cortana/internal-ui-support.sl#L17
+https://cobaltstrike.com/aggressor-script/popuphooks.html
+http://sleep.dashnine.org/manual/index.html
+https://gist.github.com/rsmudge/87ce80cd8d8d185c5870d559af2dc0c2
+https://github.com/rsmudge/sleep/blob/master/whatsnew.txt
+https://github.com/Und3rf10w/Aggressor-scripts/tree/master/Ebowla
