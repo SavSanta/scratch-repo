@@ -1,0 +1,23 @@
+- https://www.trustedsec.com/blog/a-developers-introduction-to-beacon-object-files/ Lot of caveats here
+
+- As of Windows 10 in 2022 and 2023 I am not able to use the version of Terminal Preview I have to compile. I must use Command Prompt.
+
+- Visual Studio compilation order. Enter into Visual Studio environment and then use cl.exe with as few modifiers as necessary. (ime using extra like /TP which is for CPP caused issues on a pure C implementation)
+     # 64-bit
+     >"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat"
+     >"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64\cl.exe"  /c /GS- /Entry go /TP filehashbof.c /Fofilehashbof.x86.o 
+     
+     # 32-bit
+     >"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars32.bat"
+     >"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x32\cl.exe"  /c /GS- /Entry go /TP filehashbof.c /Fofilehashbof.x64.o
+
+- Writing the BOFs need to make sure that the CRT functions are available in the current Visual Studio iteration. As Microsoft likes to try and mandate the 'unsafe' functions in the later versions of their release. Alternatively it seems like Precomp directives #define _CRT_SECURE_NO_WARNINGS
+#define _CRT_NONSTDC_NO_DEPRECATE takes care of it. 
+
+- These are just typedefs and super common: WINBASE, WINAPI, BOOL
+
+- Speaking of BOOL. The WINBOOL wasnt able to be used. So just use BOOL.
+
+- Search function for Win32 function signatures after installing mingw32 on Linux: 
+     
+- Nanodump from Fortra/HelpSystems is huge and prob a good reference for more complex BOF writing
