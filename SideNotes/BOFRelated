@@ -21,3 +21,6 @@
 - Search function for Win32 function signatures after installing mingw32 on Linux: 
      
 - Nanodump from Fortra/HelpSystems is huge and prob a good reference for more complex BOF writing
+
+- According to BofWdigest from Outflank.nl: Visual Studio (C++) does not support inline assembly for x64 processors.
+ So in order to write a single Beacon Object File containing our compiled / assembled code code we must use the Mingw-w64 (GCC for Windows) compiler.
