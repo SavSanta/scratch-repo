@@ -24,3 +24,5 @@
 
 - According to BofWdigest from Outflank.nl: Visual Studio (C++) does not support inline assembly for x64 processors.
  So in order to write a single Beacon Object File containing our compiled / assembled code code we must use the Mingw-w64 (GCC for Windows) compiler.
+
+ - This is really for WIN32 C implementation moreso than BOFs but I dont want to make a new text file yet. Essentially the typedefs defined in WIN32 for LPWSTR and CONST LPWSTR. Seems to be due to wchar_t being not typedefed for WCHAR. Current workaround is just to manually replace those. Although, one could specify a define macro probably
