@@ -26,3 +26,20 @@ cleanup:
 //    if (pwsEvtMsg)
 //        free(pwsEvtMsg);
 ```
+
+- Compile will allow you to specify wide char arguments in the main() routine and even allow you to 'work' with them in the code without errors or compilation fail. However if you do not utilize wmain() you will receive garbage and of course your code wont work as intended.
+
+```
+            argv[0] = pwsPath;
+            argv[1] = pwsQuery;
+
+PS C:\Users\Administrator\source\repos\wevtutilbof\x64\Debug> .\wevtutilexe.exe Security /q "System[EventID=1101]" /c 300
+
+The entire commandline CLI ARGC is 6 is the Path is (null)
+Query is: (null)
+Count is: 7
+
+arg 0 -> ????????????????????????????????????e?????q???????????c?0??
+```
+
+
