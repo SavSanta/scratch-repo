@@ -30,3 +30,24 @@
  - This is really for WIN32 C implementation moreso than BOFs but I dont want to make a new text file yet. Essentially the typedefs defined in WIN32 for LPWSTR and CONST LPWSTR. Seems to be due to wchar_t being not typedefed for WCHAR. Current workaround is just to manually replace those. Although, one could specify a define macro probably
 
 - Forgetting to put a calling convention in the header file for an imported function results in [one of the many ways to trigger ] the unknown symbol error. Unknown symbol '_WEVTAPI$EvtNext@24'
+
+
+- Super Weirdness with CS default BeaconPrint output with 16LE data
+```
+    LPSTR pszPath = NULL;
+    wchar_t pwsPath[100];
+    LPSTR pszQuery = NULL;
+    wchar_t pwsQuery[100];
+    LPSTR pszMessage = NULL;
+    wchar_t pwsMessage[100];
+
+    BeaconPrintf(CALLBACK_OUTPUT, "UTF16LEs: pwsPath - %ls, pwsQuery - %s, arg2 - %s", pwsPath, pwsQuery, argv[2]);
+    
+    //Output is with the specified format specifiers
+    UTF16LEs: pwsPath - Security, pwsQuery - E, arg2 - /q
+    
+    // However this is no output. Unsure if it is due to the OUTPUT STREAM being different
+    //BeaconPrintf(CALLBACK_ERROR, "Converted Stuff Hopefully %s - with a crapout of %d\n", argv[6], crapout);
+    
+```
+
