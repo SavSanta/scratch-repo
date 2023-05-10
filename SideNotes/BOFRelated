@@ -61,6 +61,6 @@ Unknown symbol '__aullrem'
 Unknown symbol '__allmul'
 ```
 
-One page states for one of these "The _allmul routine is a helper routine for the C compiler. Whether the compiler uses _allmul is completely dependent on the optimization set. This routine is used only on x86 platforms."
+One page states for one of these "The _allmul routine is a helper routine for the C compiler. Whether the compiler uses _allmul is completely dependent on the optimization set. This routine is used only on x86 platforms." (cite: https://learn.microsoft.com/en-us/windows/win32/devnotes/-win32-allmul)
 
 
