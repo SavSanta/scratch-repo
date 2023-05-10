@@ -42,4 +42,4 @@ Count is: 7
 arg 0 -> ????????????????????????????????????e?????q???????????c?0??
 ```
 
-
+- This is just a reminder of the ULARGE_INTEGER structure and TIMEDATE structure on Windows (based on finding an issue when using a non-compiler compiler of CS COFF/BeaconLoader which doesnt support 32 bit well. ). They have QuadParts but the formula when you cant use QuadParts is this: "And just to clarify, HighPart and LowPart are both just 32 bits, with the following condition (sans casting) being true on compilers that natively support 64-bit integers: `QuadPart == (HighPart << 32) & LowPart` "
