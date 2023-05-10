@@ -51,3 +51,16 @@
     
 ```
 
+- Issues it seems with x86 based object code. It appears a new set of Win32 "routines". (ie looks like piped to something assembly like?).
+
+Script Console Output
+```
+[12:33:24] [!] Function call &beacon_inline_execute failed: can't run BOF: linker errors for UserSpecifiedFull:
+Unknown symbol '__aullshr'
+Unknown symbol '__aullrem'
+Unknown symbol '__allmul'
+```
+
+One page states for one of these "The _allmul routine is a helper routine for the C compiler. Whether the compiler uses _allmul is completely dependent on the optimization set. This routine is used only on x86 platforms."
+
+
