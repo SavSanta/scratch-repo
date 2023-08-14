@@ -1,0 +1,16 @@
+
+The logon type indicates how the user logged on:
+
+2: Interactive (physical logon)
+3: Network
+4: Batch (scheduled task executed under this user)
+5: Service (service runs under this user)
+7: Unlock (workstation/server was unlocked)
+8: NetworkClearText (usually used with IIS)
+9: NewCredentials (allows cloning of token)
+10: RemoteInteractive (RDP, terminal services, remote assistance logons)
+11: CachedInteractive (logons when domain is unavailable, e.g. from laptops)
+12: CachedRemoteInteractive
+13: CachedUnlock
+
+The "Source Network Address" shows the IP address from which the logon originated, usually 127.0.0.1 when the logon was a logon type 2. For remote desktop sessions, this will show the IP address of the remote host from which the RDP connection is coming.
