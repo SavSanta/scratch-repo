@@ -61,6 +61,10 @@ Unknown symbol '__aullrem'
 Unknown symbol '__allmul'
 ```
 
+New error "fatal error C1083: Cannot open include file: 'base\helpers.h': No such file or directory" occurs due to changes in Cobalt Strike/HelpSystems around version 4.9 and later when they explicitly explained how to use other languages to compile into BOFs.
+They've now made a BOF-VS template located at github.com/Cobalt-Strike/bof-vs which has a whole host of helper crap necessary for some creators who use that template (likeSCUAMBypass)
+
+
 One page states for one of these "The _allmul routine is a helper routine for the C compiler. Whether the compiler uses _allmul is completely dependent on the optimization set. This routine is used only on x86 platforms." (cite: https://learn.microsoft.com/en-us/windows/win32/devnotes/-win32-allmul)
 
 
