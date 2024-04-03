@@ -47,3 +47,25 @@ arg 0 -> ????????????????????????????????????e?????q???????????c?0??
 -- in reference to the above. Thinking about a way to fix this would be to __asm inline. As the operations are indeed Intel ASM code that is available in VS Studio directory respectively for each machine command. Therefore reference "Inline Assembler | Microsoft Learn"  when your not lazy and play on implementing this. Both in x86 of rdir and wevtq.
 
 -- in reference to above looking at the old Win Event Loggiing stuff. I see there is an old XP era function in WINNT Int32x32To64 that "performs optimally on 32-bit Windows" and is implemented as "This function is implemented on all platforms by optimal inline code". So in theory that saves work maybe. Found in their old records method of timestamp obtainment
+
+
+-- Using byte/unsigned char*/void * help:
+
+Use char when referring to characters. Use ::std::byte when referring to bytes, it's just an enum class of unsigned char anyway. Why not use straight unsigned char? Because when do you ever want to perform modulo arithmetic on bytes? Bytes and unsigned types are not, conceptually, the same thing. They byte type actually restricts your operations to bitwise only. Use a void pointer to be generic, to keep others from knowing type information, when you know what to cast it to, and when the only other things to do with it are to hold onto it, or delete it, but again, you need to know how. There are higher level patterns for holding things, if that's something you need. It's not often useful to erase type information. 
+
+-- alternative help to using byte/unsigned char*/or void *
+
+ 16
+
+(This is a potential rule of thumb which comes off the top of my head, not condoned by anyone.)
+Rule of thumb: When to use which kind of pointer?
+
+    Use char * for sequences of textual characters, not anything else.
+    Use void * in type-erasure scenarios, i.e. when the pointed-to data is typed, but for some reason a typed pointer must not be used or it cannot be determined whether it's typed or not.
+    Use byte * for raw memory for which there is no indication of it holding any typed data.
+
+An exception to the above:
+
+    Also use void */unsigned char */char * when older code; or when non-C++ code forces you and you would otherwise use byte *. But when doing this, you could still wrap such use with a byte *-based interface, thus not exposing this state of affairs to the rest of your C++ code.
+
+
