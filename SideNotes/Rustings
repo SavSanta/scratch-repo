@@ -1,0 +1,27 @@
+
+Real example of a good example of a safety prevention here by attempt to do a double mutable transaction on a borrow
+```
+let input = "7 6 4 2 1\n1 2 7 8 9\n9 7 6 2 1";
+
+// Super finicky construction. Compiler wasnt helpful in 2 aspects
+// 1. The type annotation had to be there otherwise got bad/wrong coerces
+// 2. The second collect has to be there to match the type annotation otherwise
+// get errors that lead you off track
+let mut newlines: Vec<Vec<i32>> = input.lines()
+    .map(|line| 
+        line.split(' ')
+        .map(|s| s.trim().parse::<i32>().unwrap())
+        .collect()       // First collect for the iterated chars
+         ).collect();   //Second collect as a newline
+
+//newlines.pop_if(|x| x[0] > x[1]);
+for (count, x) in newlines.iter_mut().enumerate() {
+    if x[0] > x[1] {
+        
+        println!("me count -> {}", count);
+        newlines.remove(count);
+    }
+    
+    
+}
+```
