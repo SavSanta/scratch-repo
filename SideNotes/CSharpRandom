@@ -81,4 +81,11 @@ C# Cool use of the StringBuilder just like in Java
       sb.AppendLine(token.ToString());
     }
 
+C# Cleaner method to check for multiple values defined in a HashSet
+    HashSet<char> empty = ['\n', ' ', '\t'];
+    if (empty.Contains(letter))
+      continue;
+
+
+
 
