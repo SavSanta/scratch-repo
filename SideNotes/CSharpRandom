@@ -1,0 +1,66 @@
+// CSharp
+
+Can use fstrings with a ternary operator 
+	  public override string ToString() {
+		return $"{Type} {Lexeme} {Literal ?? "null"}";
+	  
+	  
+Default constuctor argument passing is anpther method
+	public static class TokenGenerator {
+	  public static (TokenType, string, string)
+		  CreateToken(TokenType tokenType, string character = "",
+					  string literal = "null") {
+		return (tokenType, character, literal);
+	  }
+	}
+
+
+Can use a ReadOnly span to more efficiently iterate thru char one-by-one.
+	ReadOnlySpan<char> contents = fileContents.AsSpan();
+	List<Token> tokens = [];
+	while (contents.Length > 0) {
+	  char lexeme = contents[0];
+	  TokenType tokenType = lexeme switch {
+		'(' => TokenType.LEFT_PAREN,
+		')' => TokenType.RIGHT_PAREN,
+		_ => throw new UnreachableException(),
+	  };
+	  
+	  
+C# has an enumerator helper interface for iterating. This is before the other iterators
+  var enumerator = fileContents.GetEnumerator();
+  while (enumerator.MoveNext()) {
+    char current = enumerator.Current;
+    switch (current) {
+    case '(':
+      Console.WriteLine("LEFT_PAREN ( null");
+      break;
+    case ')':
+      Console.WriteLine("RIGHT_PAREN ) null");
+      break;
+    }
+  }
+  enumerator.Dispose();
+}
+
+C# also allows enumeration using the ForEach iterator directly
+	 foreach (var character in fileContents) {
+		switch (character) {
+		case '(':
+		  tokens.Add(TokenGenerator.CreateToken(TokenType.LEFT_PAREN,
+												character.ToString()));
+		  break;
+		case ')':
+		<snip>
+		
+		
+C# Remember the pithy one-liner returns
+	private bool IsAtEnd() => _current >= Source.Length;
+	
+
+C# Cool use of the StringBuilder just like in Java
+  public override string ToString() {
+    var sb = new StringBuilder();
+    foreach (var token in Tokens) {
+      sb.AppendLine(token.ToString());
+    }
