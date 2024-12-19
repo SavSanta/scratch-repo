@@ -15,3 +15,5 @@ The line "#HTML 5" is valid but "# HTML 5" will produce headaches.
 2. The brackets are still counted in comments (as they are treated as commands), you should make sure that they are evenly matched to stave off trouble.
 
 3. If statements body opening brace can not be separated onto a new line. Yay!
+
+4. When reading input that will be used particularly in the matter of each line to a non-variadic function. You should realize that TCL treats space in passed in args as significant. The pattern should be to trim the string before passing it as an argument in case that data has multiple spaces
