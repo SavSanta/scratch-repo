@@ -3,6 +3,22 @@
 Can use fstrings with a ternary operator 
 	  public override string ToString() {
 		return $"{Type} {Lexeme} {Literal ?? "null"}";
+
+
+C# Supports some Functional paradigm of execution
+  public List<Token> ScanTokens() {
+    while (!IsAtEnd()) {
+      start = current;
+      ScanToken()
+          .Do(token => tokens.Add(token))
+          .OrElse(unexpectedToken => Lox.Error(
+                      line, $"Unexpected character: {unexpectedToken.Lexeme}"));
+    }
+    if (tokens.Count == 0 || tokens.Last().Type != TokenType.EOF) {
+      tokens.Add(CreateToken(TokenType.EOF));
+    }
+    return tokens;
+  }
 	  
 	  
 Default constuctor argument passing is anpther method
@@ -64,3 +80,5 @@ C# Cool use of the StringBuilder just like in Java
     foreach (var token in Tokens) {
       sb.AppendLine(token.ToString());
     }
+
+
