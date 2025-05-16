@@ -13,6 +13,9 @@
      >"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars32.bat"
      >"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x86\cl.exe"  /c /GS- /Entry go /TP filehashbof.c /Fofilehashbof.x64.o
 
+- Alternative using Dev Console (x86 CPP by default) to write the object file specifically (essentialyl this is critical when failing to be able to ue that confusing BOF VS Code template and you still want to roll the compile by hand.
+     cl.exe /c /GS- /TP lapsv2decrypt.cpp /Fo:newlapsdecrypt.x86.o
+
 - Writing the BOFs need to make sure that the CRT functions are available in the current Visual Studio iteration. As Microsoft likes to try and mandate the 'unsafe' functions in the later versions of their release. Alternatively it seems like Precomp directives #define _CRT_SECURE_NO_WARNINGS
 #define _CRT_NONSTDC_NO_DEPRECATE takes care of it. 
 
