@@ -69,3 +69,57 @@ An exception to the above:
     Also use void */unsigned char */char * when older code; or when non-C++ code forces you and you would otherwise use byte *. But when doing this, you could still wrap such use with a byte *-based interface, thus not exposing this state of affairs to the rest of your C++ code.
 
 
+- Translating a 64-bit pointer into a ULONGLONG works. I have had to used this for WINDOWS-BASED FILETIME objects. Thank you Neha (https://stackoverflow.com/a/51402275)
+```
+FILETIME ftime; __int64 i64;
+*(__int64 *)&ftime = i64;
+```
+
+- Casting Between unsigned char and char pointers
+If I have an unsigned char* ucData, and need to interpret it as a C-style (aka terminated by nulls) string (char*) (for say printf or whatever), then the correct and safe cast is:
+
+	`char* chNewCastedData = (char*) ucData;`
+	
+This is possible because unsigned char* and char* are both pointers to bytes. 
+An unsigned char* is typiallly used for raw binary data however while signed char is used for data with null terminations.
+
+
+- Mismatching pointer levels
+
+Mismatch between pointer levels (char** vs char*) is dangerous enough to causes crashes and undefined behavior (aka annoying subtle bugs). 
+
+
+- How to avoid static buffers by using Malloc instead of static buffers. (The caller must free the memory tho if you do this!)
+
+```
+WCHAR* RemovePrefix(WCHAR* ss) {
+    DWORD ssLen = wcslen(ss);
+    if (ssLen <= 3) return NULL;
+
+    DWORD copyLen = ssLen - 3;
+    WCHAR* buf = (WCHAR*)malloc((copyLen + 1) * sizeof(WCHAR));
+    if (!buf) return NULL;
+
+    for (DWORD i = 0; i < copyLen; i++) {
+        buf[i] = ss[i + 3];
+    }
+    buf[copyLen] = L'\0';
+
+    printf(L"SOME TEST OF THE NAME IS %ls", buf);
+    return buf; // Caller must free()
+}
+```
+
+- Quick FILETIME to UNIXTIME function
+
+```
+#define WINDOWS_TICK 10000000ULL
+#define SEC_TO_UNIX_EPOCH 11644473600ULL  // Seconds between 1601-01-01 and 1970-01-01
+
+void filetime_to_date(uint64_t filetime) {
+    // Convert FILETIME (100-ns intervals since 1601) to Unix time (seconds since 1970)
+    time_t unix_time = (time_t)(filetime / WINDOWS_TICK - SEC_TO_UNIX_EPOCH);
+    <snip>
+```	
+	
+
