@@ -122,6 +122,50 @@ WCHAR* RemovePrefix(WCHAR* ss) {
 }
 ```
 
+## Variables which are literals and that CONST are essentially already static in C (may be different in C++) are defined in the BSS. 
+So they dont need to be malloc'd and can be passed thru any functions without memory issues.
+
+
+## malloc replacement version of an static const array
+```
+char* GetMonthAbbrev(int month) {
+    const char* mon[] = {
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    };
+
+    DFR_LOCAL(MSVCRT, malloc);
+    DFR_LOCAL(MSVCRT, strcpy);
+    DFR_LOCAL(MSVCRT, _strdup);
+    DFR_LOCAL(MSVCRT, strlen);
+
+    if (month < 1 || month > 12) return _strdup("!?ERR?!"); // Allocating error message
+
+    // Allocate memory for the month abbreviation
+    char* result = (char*)malloc(strlen(mon[month - 1]) + 1);
+    if (!result) return NULL; // Handle allocation failure
+
+    strcpy(result, mon[month - 1]); // Copy the string into allocated space
+    return result;
+}
+```
+
+## Example of a passing in a function. Useful in callback style functions
+
+```
+void MyCallback(void* pvCallbackCtxt) {
+    MyContext* context = (MyContext*) pvCallbackCtxt;
+    printf("Callback with value: %d\n", context->someValue);
+}
+
+void RegisterCallback(void (*cb)(void*), void* pvCallbackCtxt) {
+    // Save the callback and context, invoke it later
+    cb(pvCallbackCtxt);  // Simulate callback
+}
+```
+
+## void ptr . They are the magic of magic. You can use this to pass address and then perform type punning  You cna use it to pass sarbitrary genericdata too and cast it back. See the decryptCallback objects in getlapsbof 1.3 for example of the former and latter.
+
 
 	
 
