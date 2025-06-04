@@ -2,6 +2,33 @@
 ## Win32 C is pretty trash. The typedefs on LPWSTR need to be manually typed as the built in concrete C builtin or re-typedef'd with the C standard builtin type
 
 
+## Important Compiler Flags
+cl.exe /nologo /Ox /MT /W0 /GS- /DNDEBUG /Tcfile.cpp /link /OUT:program.exe /SUBSYSTEM:CONSOLE /MACHINE:x64
+
+/nologo – Suppresses the startup banner of the compiler.
+
+/Ox – Enables maximum optimization for speed.
+
+/MT – Links the code against the multithreaded, statically linked runtime library.
+
+/W0 – Disables all warning messages.
+
+/GS- – Disables buffer security checks (not recommended for security-sensitive applications).
+
+/DNDEBUG – Defines NDEBUG, which disables debugging-related features.
+
+/Tcfile.cpp – Specifies file.cpp as a C source file (forces compilation as C).
+
+Linker Options:
+/link – Indicates that the following options are linker-specific.
+
+/OUT:implant.exe – Sets the output executable’s name to implant.exe.
+
+/SUBSYSTEM:CONSOLE – Specifies the program runs as a console application.
+
+/MACHINE:x64 – Targets the x64 architecture.
+
+
 ## Free-ing a string/char twice causes a Debug Assertion crash and failure. This happened for me when the cleanup section was called after freeing pwsEvtMsg already earlier. See snippet
 ```        
         pwsEvtMsg = GetEvtMessageString(NULL, hEvent, EvtFormatMessageXml);
