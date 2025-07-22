@@ -29,6 +29,10 @@ Linker Options:
 /MACHINE:x64 – Targets the x64 architecture.
 
 
+## Convert a WIDECHAR string to a CHAR string
+        char narrowEndpoint[256] = { 0 };
+        WideCharToMultiByte(CP_UTF8, 0, endpointurl, -1, narrowEndpoint, sizeof(narrowEndpoint), NULL, NULL);
+
 ## Free-ing a string/char twice causes a Debug Assertion crash and failure. This happened for me when the cleanup section was called after freeing pwsEvtMsg already earlier. See snippet
 ```        
         pwsEvtMsg = GetEvtMessageString(NULL, hEvent, EvtFormatMessageXml);
