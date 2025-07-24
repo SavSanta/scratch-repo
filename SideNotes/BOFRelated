@@ -67,7 +67,24 @@ Unknown symbol '__allmul'
 New error "fatal error C1083: Cannot open include file: 'base\helpers.h': No such file or directory" occurs due to changes in Cobalt Strike/HelpSystems around version 4.9 and later when they explicitly explained how to use other languages to compile into BOFs.
 They've now made a BOF-VS template located at github.com/Cobalt-Strike/bof-vs which has a whole host of helper crap necessary for some creators who use that template (likeSCUAMBypass)
 
-
 One page states for one of these "The _allmul routine is a helper routine for the C compiler. Whether the compiler uses _allmul is completely dependent on the optimization set. This routine is used only on x86 platforms." (cite: https://learn.microsoft.com/en-us/windows/win32/devnotes/-win32-allmul)
+
+
+```
+wchar_t authhdr[1500] = { 0 };    // This caused the error but the actual minimum point is not found yet. Additionally there were other static defines around it in the function which may be counting toward a total stack limitation.`
+wchar_t authhdr[4095] = { 0 };    // Large because authtoken can be large Ive seen 2061. Large Buffer but hopefully enough for BOF stability
+```
+
+On creation of a stack variables greater than whatever there is a silent CPP (may be C too) of the __chkstk function.
+You will get an error of
+```
+Unknown symbol '__chkstk'
+ at getlapsbof.cna:49
+```
+Need to dynamically allocate or allocate less than whatever adds that `chkstk`. This is with the MSVC compiler but the other day I was messing with clang and mingw and ran across a page that detailed something about their implementations having this issue ....and it being NOT able to turn off with those. So be extra careful around those bitches.
+
+
+- BOFs (at least Cobalt Strike up til 4.11) current have a limit of something like 128 functions. If that number is gone over then the "no slot for function (reduce number of Win32 APIs called)" error will happen. There appears to be "hidden" or "background" or "internal" functions that are made that count toward this total. So you cant use your declaration counts as a predictor. That sucks. You can of course manually define functions per project or have a separate source library with common re-implementations to save some of those slots for ones that cant/would take too much work to reimplement.
+
 
 
