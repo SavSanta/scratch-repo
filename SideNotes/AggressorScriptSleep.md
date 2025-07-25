@@ -2,7 +2,17 @@
 ##
 
 
-## Arrays weirdness. `@savmal` is supposed to be `$samval` because it is a whole integer. 
+## Arrays are fucking weird 1. `@savmal` is supposed to be `$samval` because it is a whole integer
+
+## Arrays are fucking werid 2. Accessing the arrays is according to Sleep DashNine documentaiton using '%'. However in practice of Aggressor Script code and blog I have to use dot concatentation with variables. We must use the '$' sign.
+```
+    $creds = credentials();
+    $creduser = $creds[0];
+    blog2($1, "Read Credentials Data Model: " . $creduser["user"]);
+    printAll(credentials());
+
+```
+
 ## When bitwise AND'ing with the array of objects `@heval[count]` is wrong it causes an infinite loop/crash.
 
 ```
