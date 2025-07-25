@@ -13,7 +13,7 @@
 
 ```
 
-## When bitwise AND'ing with the array of objects `@heval[count]` is wrong it causes an infinite loop/crash.
+## When bitwise AND'ing with the array of objects `@hexval[count]` is wrong it causes an infinite loop/crash.
 
 ```
   if (-istrue (@hexval[$count] & @samval))        # Wrong. Infinite recusion loophang
