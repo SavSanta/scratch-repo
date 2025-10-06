@@ -195,7 +195,11 @@ void RegisterCallback(void (*cb)(void*), void* pvCallbackCtxt) {
 }
 ```
 
-## void ptr . They are the magic of magic. You can use this to pass address and then perform type punning  You cna use it to pass sarbitrary genericdata too and cast it back. See the decryptCallback objects in getlapsbof 1.3 for example of the former and latter.
+## void ptr tricks
+
+They are the magic of magic. You can use this to pass addresses and then perform type punning  You can use it to pass arbitrary genericdata too and cast it back. See the decryptCallback objects in getlapsbof 1.3 for example of the former and latter.
+
+
 
 
 	
