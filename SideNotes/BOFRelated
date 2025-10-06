@@ -83,8 +83,17 @@ Unknown symbol '__chkstk'
 ```
 Need to dynamically allocate or allocate less than whatever adds that `chkstk`. This is with the MSVC compiler but the other day I was messing with clang and mingw and ran across a page that detailed something about their implementations having this issue ....and it being NOT able to turn off with those. So be extra careful around those bitches.
 
-
 - BOFs (at least Cobalt Strike up til 4.11) current have a limit of something like 128 functions. If that number is gone over then the "no slot for function (reduce number of Win32 APIs called)" error will happen. There appears to be "hidden" or "background" or "internal" functions that are made that count toward this total. So you cant use your declaration counts as a predictor. That sucks. You can of course manually define functions per project or have a separate source library with common re-implementations to save some of those slots for ones that cant/would take too much work to reimplement.
+
+-----
+## Coloring using C++ Possibly?
+
+I think these are Beacon Control Codes for Colors in the Terminal Using C++
+            var4[1] = var4[1].replace("\\c", "\u0003");
+            var4[1] = var4[1].replace("\\o", "\u000f");
+            var4[1] = var4[1].replace("\\u", "\u001f");
+			
+
 
 
 
